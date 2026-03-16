@@ -1,6 +1,5 @@
 # Quarto cache and rendered output
 /.quarto/
-/_site/
 **/*.quarto_ipynb
 
 # Local datasets
