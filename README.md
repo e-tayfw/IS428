@@ -12,7 +12,7 @@ Rather than treating collaboration as a simple list of names, this project is in
 - Investigate Sailor Shift's collaboration network
 - Identify important collaborators and repeated partnerships
 - Present the analysis through a clean multi-page Quarto website
-- Provide a structure that can later hold charts, network diagrams, and a final poster
+- Provide visualisation charts, network diagrams, and a final poster
 
 ## Project Stack
 

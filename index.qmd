@@ -1,5 +1,5 @@
 ---
-title: "IS428 Project"
+title: "Sailor Shift and Oceanus Folk"
 page-layout: full
 ---
 
@@ -36,7 +36,7 @@ In 2040, journalist Silas Reed is using a large music knowledge graph to trace S
 
 ## What this platform is designed to cover
 
-This project develops an interactive visual analytics platform to explore Sailor Shift's rise to global stardom and the growing influence of Oceanus Folk in the wider music ecosystem.
+This project focus on building visual analytics insights to explore Sailor Shift's rise to global stardom and the growing influence of Oceanus Folk in the wider music ecosystem.
 :::
 
 ```{=html}

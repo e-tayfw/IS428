@@ -14,13 +14,13 @@ This proposal outlines why Sailor Shift and Oceanus Folk form a compelling visua
 
 We were motivated by the challenge of making sense of complex music ecosystems where influence, collaboration, and popularity evolve together over time. Sailor Shift's rise offers an ideal case study for exploring how a single artist can both emerge from and reshape a genre community.
 
-A visual analytics system can reveal patterns that would be difficult to see in raw graph data alone, such as career inflection points, cross-genre influence flows, collaboration-driven growth, and early signals of future breakout artists.
+Using core practices of visual analytics can reveal patterns that would be difficult to see in raw semi-structured data alone, such as career inflection points, cross-genre influence flows, collaboration-driven growth, and early signals of future breakout artists.
 :::
 
 ::: {.proposal-card}
 ## Problem Statement
 
-Although the knowledge graph contains rich information about artists, releases, genres, collaborations, and influence relationships, it is difficult to directly answer higher-level questions from the raw graph structure alone.
+Although the semi-structured data contains rich information about artists, releases, genres, collaborations, and influence relationships, it is difficult to directly answer higher-level questions from the raw data alone.
 
 The main challenge is to transform this complex, time-varying relational data into interpretable visual forms that support both focused inquiry about Sailor Shift and broader analysis of Oceanus Folk as an evolving musical community.
 :::
@@ -31,7 +31,7 @@ The main challenge is to transform this complex, time-varying relational data in
 
 ## Proposal Objectives
 
-The objective of this project is to design and develop visual analytics tools that allow users to explore Sailor Shift's career, understand the spread and evolution of Oceanus Folk, and identify artist characteristics associated with breakout success.
+The objective of this project is to design and develop visualisations that allow users to explore Sailor Shift's career, understand the spread and evolution of Oceanus Folk, and identify artist characteristics associated with breakout success. We tackle this through 7 specific analytical objectives that guide our data preprocessing, network construction, and visualisation development.
 :::
 
 ```{=html}
