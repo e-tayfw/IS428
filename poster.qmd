@@ -1,0 +1,33 @@
+---
+title: "Poster"
+---
+
+::: {.poster-highlight}
+[Final summary]{.muted-label}
+
+## Poster Overview
+
+Use this page to present the polished summary of your project. It can later hold a poster image, an embedded PDF, or a short write-up of your final results.
+:::
+
+::: {.content-grid}
+::: {.section-card}
+## Key Visuals
+
+Place the main chart, dashboard snapshot, or poster image here once it is ready.
+:::
+
+::: {.section-card}
+## Main Findings
+
+- Highlight the most important pattern or result
+- Keep the interpretation brief and concrete
+- Focus on what a reader should remember
+:::
+
+::: {.section-card}
+## Conclusion
+
+Close with the project takeaway, practical implications, and any suggested next steps.
+:::
+:::

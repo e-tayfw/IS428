@@ -1,0 +1,37 @@
+---
+title: "Proposal"
+---
+
+::: {.page-intro}
+[Project planning]{.muted-label}
+
+Use this page for the main proposal narrative. Keep it focused on the project purpose, what you plan to deliver, and why the work matters.
+:::
+
+::: {.content-grid}
+::: {.section-card}
+## Problem Statement
+
+Describe the issue or question the project is solving. State the context clearly and explain why it is worth investigating.
+:::
+
+::: {.section-card}
+## Objectives
+
+- Define the main project goal
+- List the specific questions you want to answer
+- Clarify what a successful result looks like
+:::
+
+::: {.section-card}
+## Scope
+
+Explain what is included in the project and what is intentionally excluded. This helps keep the work realistic and measurable.
+:::
+
+::: {.section-card}
+## Expected Outcome
+
+Summarize the deliverables you expect at the end of the project, such as dashboards, insights, or presentation materials.
+:::
+:::

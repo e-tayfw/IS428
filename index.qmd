@@ -1,0 +1,50 @@
+---
+title: "IS428 Project"
+page-layout: full
+---
+
+::: {.hero-banner}
+[Visual Analytics]{.hero-kicker}
+
+## A clean project website built with Quarto
+
+Use this homepage as the landing page for your project. The navigation bar links to separate pages, so `Proposal`, `Methodology`, and `Poster` each render as their own proper HTML file.
+
+::: {.hero-actions}
+[Open Proposal](proposal.qmd)
+[Open Methodology](methodology.qmd)
+[Open Poster](poster.qmd)
+:::
+:::
+
+::: {.page-grid}
+::: {.feature-card}
+### Proposal
+
+Outline the problem statement, objectives, project scope, and expected outcome.
+
+[Go to proposal](proposal.qmd){.cta-link}
+:::
+
+::: {.feature-card}
+### Methodology
+
+Describe your dataset, workflow, analysis process, and visual analytics approach.
+
+[Go to methodology](methodology.qmd){.cta-link}
+:::
+
+::: {.feature-card}
+### Poster
+
+Use this page to summarize the final visuals, key findings, and conclusion.
+
+[Go to poster](poster.qmd){.cta-link}
+:::
+:::
+
+::: {.page-intro}
+[How it works]{.muted-label}
+
+This website is built from separate `.qmd` files and configured through `_quarto.yml`. When you render the project, Quarto converts each page into its own HTML file and keeps the top navigation in sync across the site.
+:::

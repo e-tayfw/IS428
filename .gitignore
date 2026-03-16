@@ -1,0 +1,10 @@
+# quarto extensions
+/.quarto
+/_site
+
+# take out all files within the data directory if data is within
+/data/*
+
+
+/.quarto/
+**/*.quarto_ipynb

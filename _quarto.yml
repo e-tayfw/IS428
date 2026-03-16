@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "IS428 Project"
+  navbar:
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Proposal
+        href: proposal.qmd
+      - text: Methodology
+        href: methodology.qmd
+      - text: Poster
+        href: poster.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false

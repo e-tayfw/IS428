@@ -1,0 +1,37 @@
+---
+title: "Methodology"
+---
+
+::: {.page-intro}
+[Approach and workflow]{.muted-label}
+
+Use this page to explain how the analysis will be carried out from raw data to final insight. The structure below is a solid default for a class project site.
+:::
+
+::: {.content-grid}
+::: {.section-card}
+## Data Sources
+
+List the datasets, APIs, or files you are using. Include a short note on where the data comes from and why it is suitable.
+:::
+
+::: {.section-card}
+## Data Preparation
+
+- Cleaning and validation
+- Feature selection or transformation
+- Joining, filtering, or reshaping data
+:::
+
+::: {.section-card}
+## Analysis Approach
+
+Explain the methods you will use, such as descriptive analytics, visual exploration, clustering, forecasting, or comparison across groups.
+:::
+
+::: {.section-card}
+## Tools and Workflow
+
+Document the tools used in the project, for example Quarto, Python, R, Tableau, or other visual analytics software.
+:::
+:::
