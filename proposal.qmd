@@ -135,3 +135,113 @@ The objective of this project is to design and develop visual analytics tools th
   </div>
 </div>
 ```
+
+::: {.section-intro}
+[Project Timeline]{.muted-label}
+
+## Timeline and milestone plan
+
+The schedule below reconstructs the project plan from the proposal timeline, showing how exploration, analysis, deliverables, and meetings progress from Week 9 to Week 14.
+:::
+
+```{=html}
+<div class="timeline-shell">
+  <div class="timeline-legend">
+    <span class="timeline-legend-item"><span class="timeline-swatch phase-exploration"></span>Exploration</span>
+    <span class="timeline-legend-item"><span class="timeline-swatch phase-analysis"></span>Analysis</span>
+    <span class="timeline-legend-item"><span class="timeline-swatch phase-deliverable"></span>Deliverables</span>
+    <span class="timeline-legend-item"><span class="timeline-swatch phase-meeting"></span>Meetings</span>
+  </div>
+
+  <div class="timeline-header-row">
+    <div class="timeline-task-heading">Task</div>
+    <div class="timeline-week-heading">W9<span>9 Mar - 15 Mar</span></div>
+    <div class="timeline-week-heading">W10<span>16 Mar - 22 Mar</span></div>
+    <div class="timeline-week-heading">W11<span>23 Mar - 29 Mar</span></div>
+    <div class="timeline-week-heading">W12<span>30 Mar - 5 Apr</span></div>
+    <div class="timeline-week-heading">W13<span>6 Apr - 12 Apr</span></div>
+    <div class="timeline-week-heading">W14<span>13 Apr - 19 Apr</span></div>
+  </div>
+
+  <div class="timeline-group-title">Project Exploration</div>
+
+  <div class="timeline-row">
+    <div class="timeline-label">Guidelines, overview, and theme selection</div>
+    <div class="timeline-track">
+      <span class="timeline-bar phase-exploration" style="grid-column: 1 / span 1;"></span>
+    </div>
+  </div>
+
+  <div class="timeline-row">
+    <div class="timeline-label">Draft proposal completion</div>
+    <div class="timeline-track">
+      <span class="timeline-bar phase-exploration" style="grid-column: 1 / span 1;"></span>
+    </div>
+  </div>
+
+  <div class="timeline-row">
+    <div class="timeline-label">Website, repository, consultation, and scope finalization</div>
+    <div class="timeline-track">
+      <span class="timeline-bar phase-exploration" style="grid-column: 2 / span 1;"></span>
+    </div>
+  </div>
+
+  <div class="timeline-group-title">Analysis of Data</div>
+
+  <div class="timeline-row">
+    <div class="timeline-label">Preliminary EDA and data familiarization</div>
+    <div class="timeline-track">
+      <span class="timeline-bar phase-analysis" style="grid-column: 2 / span 1;"></span>
+    </div>
+  </div>
+
+  <div class="timeline-row">
+    <div class="timeline-label">Career trajectory, influence, and collaboration analysis</div>
+    <div class="timeline-track">
+      <span class="timeline-bar phase-analysis" style="grid-column: 2 / span 3;"></span>
+    </div>
+  </div>
+
+  <div class="timeline-row">
+    <div class="timeline-label">Genre diffusion, stylistic evolution, and rising-star analysis</div>
+    <div class="timeline-track">
+      <span class="timeline-bar phase-analysis" style="grid-column: 3 / span 2;"></span>
+    </div>
+  </div>
+
+  <div class="timeline-group-title">Deliverables Preparation</div>
+
+  <div class="timeline-row">
+    <div class="timeline-label">Website refinement and visualization guide</div>
+    <div class="timeline-track">
+      <span class="timeline-bar phase-deliverable" style="grid-column: 2 / span 4;"></span>
+    </div>
+  </div>
+
+  <div class="timeline-row">
+    <div class="timeline-label">Poster development and final presentation materials</div>
+    <div class="timeline-track">
+      <span class="timeline-bar phase-deliverable" style="grid-column: 4 / span 2;"></span>
+    </div>
+  </div>
+
+  <div class="timeline-row">
+    <div class="timeline-label">Meeting minutes and final project artifacts</div>
+    <div class="timeline-track">
+      <span class="timeline-bar phase-deliverable" style="grid-column: 1 / span 6;"></span>
+    </div>
+  </div>
+
+  <div class="timeline-group-title">Meetings</div>
+
+  <div class="timeline-row">
+    <div class="timeline-label">Milestone meetings with project stakeholders</div>
+    <div class="timeline-track timeline-track--meetings">
+      <span class="timeline-bar phase-meeting timeline-bar--milestone" style="grid-column: 1;"></span>
+      <span class="timeline-bar phase-meeting timeline-bar--milestone" style="grid-column: 2;"></span>
+      <span class="timeline-bar phase-meeting timeline-bar--milestone" style="grid-column: 3;"></span>
+      <span class="timeline-bar phase-meeting timeline-bar--milestone" style="grid-column: 4;"></span>
+    </div>
+  </div>
+</div>
+```
