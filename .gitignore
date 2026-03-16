@@ -1,10 +1,10 @@
-# quarto extensions
-/.quarto
-/_site
-
-# take out all files within the data directory if data is within
-/data/*
-
-
+# Quarto cache and rendered output
 /.quarto/
+/_site/
 **/*.quarto_ipynb
+
+# Local datasets
+/data/*
+!/data/.gitkeep
+/datasets/*
+!/datasets/.gitkeep
