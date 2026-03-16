@@ -4,17 +4,112 @@ page-layout: full
 ---
 
 ::: {.hero-banner}
-[Visual Analytics]{.hero-kicker}
+[MC1]{.hero-kicker}
 
-## A clean project website built with Quarto
+## Studying Sailor Shift's Influence in the Music Industry
 
-Use this homepage as the landing page for your project. The navigation bar links to separate pages, so `Proposal`, `Methodology`, and `Poster` each render as their own proper HTML file.
+Tracing Sailor Shift's rise, collaboration network, and the global spread of Oceanus Folk through visual analytics.
 
 ::: {.hero-actions}
-[Open Proposal](proposal.qmd)
-[Open Methodology](methodology.qmd)
-[Open Poster](poster.qmd)
+[Proposal](proposal.qmd)
+[Methodology](methodology.qmd)
+[Poster](poster.qmd)
 :::
+:::
+
+::: {.overview-grid}
+::: {.project-overview}
+[Project Overview]{.muted-label}
+
+Sailor Shift rose from Oceanus's local music scene to become one of the world's biggest stars, helping bring Oceanus Folk to global audiences. Beginning with the band Ivy Echoes in 2023, Sailor's career took off after a viral 2028 single made history as the first Oceanus Folk song to top global charts. Since then, her growing discography, cross-genre collaborations, and commitment to uplifting emerging artists have expanded both her own influence and that of Oceanus Folk worldwide.
+
+In 2040, journalist Silas Reed is using a large music knowledge graph to trace Sailor's journey, reconnect her story to her former bandmates, and examine how Oceanus Folk evolved from a local tradition into a global force. This project transforms that graph into visualizations and insights that reveal Sailor's rise, her network of collaborations, and the broader cultural impact of Oceanus Folk.
+:::
+
+::: {.overview-visual}
+![](https://images.unsplash.com/photo-1709563941129-198d4c480e60?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1400){.overview-photo fig-alt="A live music performer singing into a microphone in front of a crowd."}
+:::
+:::
+
+::: {.section-intro}
+[Project Scope]{.muted-label}
+
+## What this platform is designed to cover
+
+This project develops an interactive visual analytics platform to explore Sailor Shift's rise to global stardom and the growing influence of Oceanus Folk in the wider music ecosystem.
+:::
+
+```{=html}
+<div id="scopeCarousel" class="carousel slide scope-carousel" data-bs-interval="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="scope-card scope-slide">
+        <div class="scope-step">01</div>
+        <h3>Data Exploration</h3>
+        <p>Study the knowledge graph's schema, entity types, relationships, and key statistics to understand the structure and coverage of the dataset.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="scope-card scope-slide">
+        <div class="scope-step">02</div>
+        <h3>Analysis Definition</h3>
+        <p>Define core analysis areas, including career trajectory, influence and lineage, collaboration networks, genre diffusion and evolution, and emerging artist detection.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="scope-card scope-slide">
+        <div class="scope-step">03</div>
+        <h3>Data Extraction and Preparation</h3>
+        <p>Transform the raw JSON knowledge graph into smaller, analysis-ready network files, including GEXF and Gephi-compatible graphs tailored to each analytical objective.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="scope-card scope-slide">
+        <div class="scope-step">04</div>
+        <h3>Network Construction</h3>
+        <p>Build multiple focused networks to examine different perspectives of the music ecosystem, such as Sailor's personal career network, influence network, collaboration network, and genre-level diffusion network.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="scope-card scope-slide">
+        <div class="scope-step">05</div>
+        <h3>Visual Analytics Development</h3>
+        <p>Create clear and informative visualizations that reveal patterns in popularity growth, artistic influence, collaboration structure, and the spread of Oceanus Folk over time.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="scope-card scope-slide">
+        <div class="scope-step">06</div>
+        <h3>Insight Generation</h3>
+        <p>Use these networks and visualizations to uncover meaningful stories about Sailor Shift's career, the evolution of Oceanus Folk, and the characteristics of future breakout artists.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="scope-carousel-footer">
+    <div class="scope-indicators">
+      <button type="button" data-bs-target="#scopeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Go to scope card 1"></button>
+      <button type="button" data-bs-target="#scopeCarousel" data-bs-slide-to="1" aria-label="Go to scope card 2"></button>
+      <button type="button" data-bs-target="#scopeCarousel" data-bs-slide-to="2" aria-label="Go to scope card 3"></button>
+      <button type="button" data-bs-target="#scopeCarousel" data-bs-slide-to="3" aria-label="Go to scope card 4"></button>
+      <button type="button" data-bs-target="#scopeCarousel" data-bs-slide-to="4" aria-label="Go to scope card 5"></button>
+      <button type="button" data-bs-target="#scopeCarousel" data-bs-slide-to="5" aria-label="Go to scope card 6"></button>
+    </div>
+
+    <div class="scope-nav">
+      <button class="scope-nav-button" type="button" data-bs-target="#scopeCarousel" data-bs-slide="prev">Previous</button>
+      <button class="scope-nav-button" type="button" data-bs-target="#scopeCarousel" data-bs-slide="next">Next</button>
+    </div>
+  </div>
+</div>
+```
+
+::: {.section-intro}
+[Explore the Site]{.muted-label}
+
+## Core project pages
+
+Use these sections to move from project framing to method, then to final communication.
 :::
 
 ::: {.page-grid}
@@ -29,7 +124,7 @@ Outline the problem statement, objectives, project scope, and expected outcome.
 ::: {.feature-card}
 ### Methodology
 
-Describe your dataset, workflow, analysis process, and visual analytics approach.
+Describe the dataset, workflow, analysis process, and visual analytics approach.
 
 [Go to methodology](methodology.qmd){.cta-link}
 :::
@@ -41,10 +136,4 @@ Use this page to summarize the final visuals, key findings, and conclusion.
 
 [Go to poster](poster.qmd){.cta-link}
 :::
-:::
-
-::: {.page-intro}
-[How it works]{.muted-label}
-
-This website is built from separate `.qmd` files and configured through `_quarto.yml`. When you render the project, Quarto converts each page into its own HTML file and keeps the top navigation in sync across the site.
 :::

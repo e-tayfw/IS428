@@ -167,7 +167,9 @@ main.content {
 }
 
 .page-grid,
-.content-grid {
+.content-grid,
+.overview-grid,
+.proposal-grid {
   display: grid;
   gap: 1.25rem;
   margin: 1.5rem 0 2rem;
@@ -181,10 +183,24 @@ main.content {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+.overview-grid {
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.95fr);
+  align-items: stretch;
+}
+
+.proposal-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
 .feature-card,
 .section-card,
 .page-intro,
-.poster-highlight {
+.poster-highlight,
+.project-overview,
+.overview-visual,
+.scope-card,
+.section-intro,
+.proposal-card {
   border: 1px solid var(--site-line);
   border-radius: var(--site-radius-md);
   background: var(--site-surface);
@@ -194,7 +210,11 @@ main.content {
 
 .feature-card,
 .section-card,
-.poster-highlight {
+.poster-highlight,
+.project-overview,
+.overview-visual,
+.scope-card,
+.proposal-card {
   padding: 1.4rem;
 }
 
@@ -203,10 +223,64 @@ main.content {
   margin: 1.25rem 0 1.5rem;
 }
 
+.section-intro {
+  margin: 0.5rem 0 0;
+  padding: 1.55rem 1.7rem;
+}
+
+.section-intro h2 {
+  margin-top: 0;
+  margin-bottom: 0.65rem;
+  color: var(--site-ink);
+  letter-spacing: -0.02em;
+}
+
+.section-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.project-overview {
+  padding: 1.7rem;
+}
+
+.project-overview p:last-child {
+  margin-bottom: 0;
+}
+
+.proposal-card {
+  padding: 1.65rem;
+}
+
+.proposal-card h2 {
+  margin-top: 0;
+  color: var(--site-ink);
+  letter-spacing: -0.02em;
+}
+
+.proposal-card p:last-child {
+  margin-bottom: 0;
+}
+
+.overview-visual {
+  display: flex;
+  align-items: stretch;
+  padding: 1.25rem;
+}
+
+.overview-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  border-radius: calc(var(--site-radius-md) - 6px);
+  display: block;
+}
+
 .feature-card h3,
 .section-card h2,
 .section-card h3,
-.poster-highlight h2 {
+.poster-highlight h2,
+.scope-card h3 {
   margin-top: 0;
   color: var(--site-ink);
   letter-spacing: -0.02em;
@@ -214,7 +288,8 @@ main.content {
 
 .feature-card p:last-child,
 .section-card p:last-child,
-.poster-highlight p:last-child {
+.poster-highlight p:last-child,
+.scope-card p:last-child {
   margin-bottom: 0;
 }
 
@@ -230,6 +305,153 @@ main.content {
   margin-bottom: 1rem;
   border-radius: 999px;
   background: linear-gradient(90deg, var(--site-primary), var(--site-accent));
+}
+
+.scope-card {
+  position: relative;
+}
+
+.scope-carousel {
+  margin: 1.5rem 0 2.35rem;
+}
+
+.scope-slide {
+  min-height: 280px;
+  padding: 1.65rem;
+}
+
+.scope-card::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  margin-bottom: 0.95rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(15, 76, 92, 0.9), rgba(192, 132, 87, 0.9));
+}
+
+.scope-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  padding: 0.3rem 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  background: var(--site-primary-soft);
+  color: var(--site-primary);
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.scope-carousel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.9rem;
+}
+
+.scope-indicators {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.scope-indicators button {
+  width: 11px;
+  height: 11px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(15, 76, 92, 0.22);
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.scope-indicators button.active,
+.scope-indicators button:hover {
+  background: var(--site-primary);
+  transform: scale(1.1);
+}
+
+.scope-nav {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.scope-nav-button {
+  padding: 0.75rem 1.1rem;
+  border: 1px solid rgba(15, 76, 92, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--site-primary);
+  font-weight: 700;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.scope-nav-button:hover {
+  transform: translateY(-1px);
+  background: var(--site-primary-soft);
+  border-color: rgba(15, 76, 92, 0.28);
+}
+
+.proposal-accordion {
+  margin: 1.5rem 0 2rem;
+}
+
+.proposal-accordion .accordion-item {
+  overflow: hidden;
+  margin-bottom: 0.95rem;
+  border: 1px solid var(--site-line);
+  border-radius: var(--site-radius-md);
+  background: var(--site-surface);
+  box-shadow: var(--site-shadow);
+  backdrop-filter: blur(8px);
+}
+
+.proposal-accordion .accordion-button {
+  gap: 0.95rem;
+  padding: 1.2rem 1.35rem;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--site-ink);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  box-shadow: none;
+}
+
+.proposal-accordion .accordion-button:not(.collapsed) {
+  background: rgba(219, 238, 240, 0.72);
+  color: var(--site-primary);
+  box-shadow: none;
+}
+
+.proposal-accordion .accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.proposal-accordion .accordion-body {
+  padding: 0 1.35rem 1.25rem;
+}
+
+.proposal-accordion .accordion-body p {
+  margin-bottom: 0;
+}
+
+.objective-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: var(--site-primary-soft);
+  color: var(--site-primary);
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
 }
 
 .section-card ul,
@@ -267,6 +489,16 @@ a:hover {
   color: #0b3f4c;
 }
 
+.nav-footer {
+  border-top: 1px solid rgba(15, 76, 92, 0.12);
+  background: rgba(252, 251, 248, 0.9);
+  color: var(--site-muted);
+}
+
+.nav-footer a {
+  color: var(--site-primary);
+}
+
 @media (max-width: 768px) {
   .hero-banner {
     margin-top: 0.5rem;
@@ -283,5 +515,23 @@ a:hover {
   .hero-actions a,
   .cta-link {
     width: 100%;
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scope-carousel-footer,
+  .scope-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .scope-nav-button {
+    width: 100%;
+  }
+
+  .section-intro {
+    padding: 1.35rem 1.25rem;
   }
 }

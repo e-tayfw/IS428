@@ -3,35 +3,135 @@ title: "Proposal"
 ---
 
 ::: {.page-intro}
-[Project planning]{.muted-label}
+[Project Proposal]{.muted-label}
 
-Use this page for the main proposal narrative. Keep it focused on the project purpose, what you plan to deliver, and why the work matters.
+This proposal outlines why Sailor Shift and Oceanus Folk form a compelling visual analytics case study, what analytical challenge the project addresses, and which objectives guide the development of the final system.
 :::
 
-::: {.content-grid}
-::: {.section-card}
+::: {.proposal-grid}
+::: {.proposal-card}
+## Motivation
+
+We were motivated by the challenge of making sense of complex music ecosystems where influence, collaboration, and popularity evolve together over time. Sailor Shift's rise offers an ideal case study for exploring how a single artist can both emerge from and reshape a genre community.
+
+A visual analytics system can reveal patterns that would be difficult to see in raw graph data alone, such as career inflection points, cross-genre influence flows, collaboration-driven growth, and early signals of future breakout artists.
+:::
+
+::: {.proposal-card}
 ## Problem Statement
 
-Describe the issue or question the project is solving. State the context clearly and explain why it is worth investigating.
-:::
+Although the knowledge graph contains rich information about artists, releases, genres, collaborations, and influence relationships, it is difficult to directly answer higher-level questions from the raw graph structure alone.
 
-::: {.section-card}
-## Objectives
-
-- Define the main project goal
-- List the specific questions you want to answer
-- Clarify what a successful result looks like
-:::
-
-::: {.section-card}
-## Scope
-
-Explain what is included in the project and what is intentionally excluded. This helps keep the work realistic and measurable.
-:::
-
-::: {.section-card}
-## Expected Outcome
-
-Summarize the deliverables you expect at the end of the project, such as dashboards, insights, or presentation materials.
+The main challenge is to transform this complex, time-varying relational data into interpretable visual forms that support both focused inquiry about Sailor Shift and broader analysis of Oceanus Folk as an evolving musical community.
 :::
 :::
+
+::: {.section-intro}
+[Project Goals]{.muted-label}
+
+## Proposal Objectives
+
+The objective of this project is to design and develop visual analytics tools that allow users to explore Sailor Shift's career, understand the spread and evolution of Oceanus Folk, and identify artist characteristics associated with breakout success.
+:::
+
+```{=html}
+<div class="accordion proposal-accordion" id="proposalObjectivesAccordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="objectiveOneHeading">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#objectiveOne" aria-expanded="true" aria-controls="objectiveOne">
+        <span class="objective-number">01</span>
+        <span>Career Trajectory</span>
+      </button>
+    </h2>
+    <div id="objectiveOne" class="accordion-collapse collapse show" aria-labelledby="objectiveOneHeading" data-bs-parent="#proposalObjectivesAccordion">
+      <div class="accordion-body">
+        <p>Model Sailor Shift's career as a temporal trajectory using release history, popularity, genre transitions, and collaboration activity.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="objectiveTwoHeading">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#objectiveTwo" aria-expanded="false" aria-controls="objectiveTwo">
+        <span class="objective-number">02</span>
+        <span>Influence Relationships</span>
+      </button>
+    </h2>
+    <div id="objectiveTwo" class="accordion-collapse collapse" aria-labelledby="objectiveTwoHeading" data-bs-parent="#proposalObjectivesAccordion">
+      <div class="accordion-body">
+        <p>Visualize and analyze influence relationships surrounding Sailor Shift, including both artists who shaped her development and artists or communities she later influenced.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="objectiveThreeHeading">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#objectiveThree" aria-expanded="false" aria-controls="objectiveThree">
+        <span class="objective-number">03</span>
+        <span>Collaboration and Band Dynamics</span>
+      </button>
+    </h2>
+    <div id="objectiveThree" class="accordion-collapse collapse" aria-labelledby="objectiveThreeHeading" data-bs-parent="#proposalObjectivesAccordion">
+      <div class="accordion-body">
+        <p>Examine the contribution of collaborations and band relationships to Sailor Shift's rise and to the wider spread of Oceanus Folk.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="objectiveFourHeading">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#objectiveFour" aria-expanded="false" aria-controls="objectiveFour">
+        <span class="objective-number">04</span>
+        <span>Genre Diffusion Over Time</span>
+      </button>
+    </h2>
+    <div id="objectiveFour" class="accordion-collapse collapse" aria-labelledby="objectiveFourHeading" data-bs-parent="#proposalObjectivesAccordion">
+      <div class="accordion-body">
+        <p>Measure and visualize the diffusion of Oceanus Folk across artists and genres over time, identifying whether its rise was gradual, bursty, or tied to major events.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="objectiveFiveHeading">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#objectiveFive" aria-expanded="false" aria-controls="objectiveFive">
+        <span class="objective-number">05</span>
+        <span>Stylistic Evolution</span>
+      </button>
+    </h2>
+    <div id="objectiveFive" class="accordion-collapse collapse" aria-labelledby="objectiveFiveHeading" data-bs-parent="#proposalObjectivesAccordion">
+      <div class="accordion-body">
+        <p>Analyze how Oceanus Folk evolved stylistically in response to growing mainstream attention, especially in terms of external genre influences and hybridity.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="objectiveSixHeading">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#objectiveSix" aria-expanded="false" aria-controls="objectiveSix">
+        <span class="objective-number">06</span>
+        <span>Rising-Star Profile</span>
+      </button>
+    </h2>
+    <div id="objectiveSix" class="accordion-collapse collapse" aria-labelledby="objectiveSixHeading" data-bs-parent="#proposalObjectivesAccordion">
+      <div class="accordion-body">
+        <p>Define a data-driven profile of a rising star by extracting and comparing features related to popularity growth, network position, genre breadth, and influence.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="objectiveSevenHeading">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#objectiveSeven" aria-expanded="false" aria-controls="objectiveSeven">
+        <span class="objective-number">07</span>
+        <span>Future Artist Discovery</span>
+      </button>
+    </h2>
+    <div id="objectiveSeven" class="accordion-collapse collapse" aria-labelledby="objectiveSevenHeading" data-bs-parent="#proposalObjectivesAccordion">
+      <div class="accordion-body">
+        <p>Identify promising future Oceanus Folk artists by applying the rising-star characterization to emerging artists in the ecosystem.</p>
+      </div>
+    </div>
+  </div>
+</div>
+```
