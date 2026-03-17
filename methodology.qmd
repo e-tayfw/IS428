@@ -5,33 +5,251 @@ title: "Methodology"
 ::: {.page-intro}
 [Approach and workflow]{.muted-label}
 
-Use this page to explain how the analysis will be carried out from raw data to final insight. The structure below is a solid default for a class project site.
+This page summarizes the datasets, analysis focus, and workflow used in the project.
 :::
 
-::: {.content-grid}
-::: {.section-card}
-## Data Sources
+```{=html}
+<section class="section-card methodology-card">
+  <h2>Data Sources</h2>
+  <p class="methodology-lead">The project uses four core files to describe the music knowledge graph, its entities, and its relationships.</p>
 
-List the datasets, APIs, or files you are using. Include a short note on where the data comes from and why it is suitable.
-:::
+  <div class="source-grid">
+    <article class="source-card">
+      <span class="source-label">Raw graph</span>
+      <h3>MC1_graph.json</h3>
+      <p>Complete graph of artists, genres, releases, and links.</p>
+    </article>
 
-::: {.section-card}
-## Data Preparation
+    <article class="source-card">
+      <span class="source-label">Edges table</span>
+      <h3>mc1_edges.csv</h3>
+      <p>Relationship table for collaborations, influence, and band links.</p>
+    </article>
 
-- Cleaning and validation
-- Feature selection or transformation
-- Joining, filtering, or reshaping data
-:::
+    <article class="source-card">
+      <span class="source-label">Nodes table</span>
+      <h3>mc1_nodes.csv</h3>
+      <p>Entity table for artists, bands, releases, genres, and attributes.</p>
+    </article>
 
-::: {.section-card}
-## Analysis Approach
+    <article class="source-card">
+      <span class="source-label">Reference doc</span>
+      <h3>VAST 2025 MC1 Data Description.docx</h3>
+      <p>Schema reference for file structure, fields, node types, and edge types.</p>
+    </article>
+  </div>
 
-Explain the methods you will use, such as descriptive analytics, visual exploration, clustering, forecasting, or comparison across groups.
-:::
+  <a class="drive-card" href="https://drive.google.com/drive/folders/1mfKNpFC0zFvP9mVG6L05X8QQdNyGdFnq?usp=drive_link" target="_blank" rel="noopener noreferrer">
+    <span class="drive-icon" aria-hidden="true">
+      <svg viewBox="0 0 87.3 78" role="img" focusable="false">
+        <path fill="#0F9D58" d="M6.6 67.5 30.7 25.8h20.9L27.5 67.5z"/>
+        <path fill="#FFC107" d="M56.6 67.5H27.5l24.1-41.7h29.1z"/>
+        <path fill="#1976D2" d="M46.7 10.5 70.8 52.2 56.6 67.5 32.5 25.8z"/>
+      </svg>
+    </span>
+    <span class="drive-card-copy">
+      <span class="drive-card-label">Google Drive Repository</span>
+      <span class="drive-card-title">Open shared project folder</span>
+      <span class="drive-card-text">Access the dataset directory, supporting files, and working materials for the project.</span>
+    </span>
+  </a>
+</section>
 
-::: {.section-card}
-## Tools and Workflow
+<section class="section-card methodology-card">
+  <h2>Analysis Approach</h2>
+  <p class="methodology-lead">The analytical focus is organized into five linked studies. Click each item to expand the scope, purpose, and supporting tasks.</p>
 
-Document the tools used in the project, for example Quarto, Python, R, Tableau, or other visual analytics software.
-:::
-:::
+  <div class="accordion proposal-accordion methodology-accordion" id="methodologyAnalysisAccordion">
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="analysisOneHeading">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#analysisOne" aria-expanded="true" aria-controls="analysisOne">
+          <span class="objective-number">01</span>
+          <span>Career Trajectory Analysis</span>
+        </button>
+      </h3>
+      <div id="analysisOne" class="accordion-collapse collapse show" aria-labelledby="analysisOneHeading" data-bs-parent="#methodologyAnalysisAccordion">
+        <div class="accordion-body">
+          <p>This analysis examines the temporal development of an artist’s career, including emergence, breakthrough, consolidation, and expansion across time.</p>
+
+          <div class="analysis-block">
+            <span class="source-label">It covers</span>
+            <ul>
+              <li>release history</li>
+              <li>popularity growth</li>
+              <li>career phases and timeline shifts</li>
+              <li>genre transitions</li>
+              <li>major milestones and inflection points</li>
+            </ul>
+          </div>
+
+          <div class="analysis-block">
+            <span class="source-label">This supports</span>
+            <div class="analysis-supports">
+              <span class="analysis-tag">T1 Characterize Sailor Shift's career trajectory</span>
+              <span class="analysis-tag">Part of T6 rising star profile</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="analysisTwoHeading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#analysisTwo" aria-expanded="false" aria-controls="analysisTwo">
+          <span class="objective-number">02</span>
+          <span>Influence and Lineage Analysis</span>
+        </button>
+      </h3>
+      <div id="analysisTwo" class="accordion-collapse collapse" aria-labelledby="analysisTwoHeading" data-bs-parent="#methodologyAnalysisAccordion">
+        <div class="accordion-body">
+          <p>This analysis investigates the lineage of artistic influence within the music ecosystem, including both incoming influences that shaped Sailor and outgoing influences that reflect her wider impact.</p>
+
+          <div class="analysis-block">
+            <span class="source-label">It covers</span>
+            <ul>
+              <li>who influenced Sailor</li>
+              <li>who Sailor influenced</li>
+              <li>direct and indirect influence paths</li>
+              <li>genre-level influence lineage</li>
+              <li>changes in influence across career phases</li>
+            </ul>
+          </div>
+
+          <div class="analysis-block">
+            <span class="source-label">This supports</span>
+            <div class="analysis-supports">
+              <span class="analysis-tag">T2 Trace incoming and outgoing influence</span>
+              <span class="analysis-tag">Part of T4 diffusion</span>
+              <span class="analysis-tag">Part of T5 genre evolution</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="analysisThreeHeading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#analysisThree" aria-expanded="false" aria-controls="analysisThree">
+          <span class="objective-number">03</span>
+          <span>Collaboration and Network Analysis</span>
+        </button>
+      </h3>
+      <div id="analysisThree" class="accordion-collapse collapse" aria-labelledby="analysisThreeHeading" data-bs-parent="#methodologyAnalysisAccordion">
+        <div class="accordion-body">
+          <p>This analysis examines how collaboration networks, band affiliations, and production relationships contribute to artist visibility, career momentum, and cross-community influence.</p>
+
+          <div class="analysis-block">
+            <span class="source-label">It covers</span>
+            <ul>
+              <li>collaborators</li>
+              <li>bandmate relationships</li>
+              <li>producers and industry ties</li>
+              <li>network centrality</li>
+              <li>bridging across genres or communities</li>
+            </ul>
+          </div>
+
+          <div class="analysis-block">
+            <span class="source-label">This supports</span>
+            <div class="analysis-supports">
+              <span class="analysis-tag">T3 Role of collaboration</span>
+              <span class="analysis-tag">Part of T6 rising star profile</span>
+              <span class="analysis-tag">Part of T7 future stars</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="analysisFourHeading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#analysisFour" aria-expanded="false" aria-controls="analysisFour">
+          <span class="objective-number">04</span>
+          <span>Genre Diffusion and Evolution Analysis</span>
+        </button>
+      </h3>
+      <div id="analysisFour" class="accordion-collapse collapse" aria-labelledby="analysisFourHeading" data-bs-parent="#methodologyAnalysisAccordion">
+        <div class="accordion-body">
+          <p>This analysis explores the outward diffusion of Oceanus Folk across artists and genres, as well as the inward evolution of the genre under changing cultural and commercial conditions.</p>
+
+          <div class="analysis-block">
+            <span class="source-label">It covers</span>
+            <ul>
+              <li>spread of Oceanus Folk across the music world</li>
+              <li>whether diffusion was gradual or bursty</li>
+              <li>which genres and artists were most influenced</li>
+              <li>how Oceanus Folk changed over time</li>
+              <li>incoming inspirations into contemporary Oceanus Folk</li>
+            </ul>
+          </div>
+
+          <div class="analysis-block">
+            <span class="source-label">This supports</span>
+            <div class="analysis-supports">
+              <span class="analysis-tag">T4 diffusion of Oceanus Folk</span>
+              <span class="analysis-tag">T5 evolution of Oceanus Folk</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="analysisFiveHeading">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#analysisFive" aria-expanded="false" aria-controls="analysisFive">
+          <span class="objective-number">05</span>
+          <span>Emerging Artist and Rising Star Analysis</span>
+        </button>
+      </h3>
+      <div id="analysisFive" class="accordion-collapse collapse" aria-labelledby="analysisFiveHeading" data-bs-parent="#methodologyAnalysisAccordion">
+        <div class="accordion-body">
+          <p>This analysis identifies the characteristics associated with breakout success by comparing artist trajectories, network patterns, and influence dynamics across the Oceanus Folk ecosystem.</p>
+
+          <div class="analysis-block">
+            <span class="source-label">It covers</span>
+            <ul>
+              <li>features that define a rising star</li>
+              <li>comparison of selected artists</li>
+              <li>momentum indicators</li>
+              <li>identification of promising future Oceanus Folk artists</li>
+            </ul>
+          </div>
+
+          <div class="analysis-block">
+            <span class="source-label">This supports</span>
+            <div class="analysis-supports">
+              <span class="analysis-tag">T6 rising star profile</span>
+              <span class="analysis-tag">T7 forecast future stars</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-card methodology-card">
+  <h2>Tools and Workflow</h2>
+  <p class="methodology-lead">The workflow links source data, network analysis, and presentation into a single project pipeline.</p>
+
+  <div class="methodology-step-grid">
+    <article class="methodology-step">
+      <span class="source-label">Step 01</span>
+      <h3>Source review</h3>
+      <p>Inspect the graph files and schema reference to understand entities, relationships, and coverage.</p>
+    </article>
+
+    <article class="methodology-step">
+      <span class="source-label">Step 02</span>
+      <h3>Focused analysis</h3>
+      <p>Study trajectory, influence, collaboration, and genre spread through targeted network views.</p>
+    </article>
+
+    <article class="methodology-step">
+      <span class="source-label">Step 03</span>
+      <h3>Project delivery</h3>
+      <p>Document methods and communicate findings through the Quarto website and project poster.</p>
+    </article>
+  </div>
+</section>
+```

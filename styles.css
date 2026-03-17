@@ -261,6 +261,220 @@ main.content {
   margin-bottom: 0;
 }
 
+.source-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+  margin: 1.2rem 0 1.35rem;
+}
+
+.methodology-card {
+  width: 100%;
+  padding: 1.55rem;
+  margin-top: 1.35rem;
+}
+
+.methodology-card h2 {
+  margin-bottom: 0.7rem;
+}
+
+.methodology-lead {
+  max-width: 62rem;
+  margin-bottom: 0;
+  color: var(--site-muted);
+}
+
+.source-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 1.15rem;
+  border: 1px solid rgba(15, 76, 92, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.74);
+}
+
+.source-label {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  color: var(--site-primary);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.source-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--site-ink);
+  font-size: 0.92rem;
+  font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, monospace;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+}
+
+.source-card p:last-child {
+  margin-bottom: 0;
+}
+
+.methodology-pill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+  margin-top: 1.15rem;
+}
+
+.methodology-pill {
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(15, 76, 92, 0.1);
+  border-radius: 16px;
+  background: rgba(240, 247, 248, 0.9);
+  color: var(--site-ink);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.methodology-step-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+  margin-top: 1.15rem;
+}
+
+.methodology-step {
+  height: 100%;
+  padding: 1.15rem;
+  border: 1px solid rgba(15, 76, 92, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.74);
+}
+
+.methodology-step h3 {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+}
+
+.methodology-step p:last-child {
+  margin-bottom: 0;
+}
+
+.methodology-accordion {
+  margin: 1.25rem 0 0;
+}
+
+.methodology-accordion .accordion-body {
+  display: grid;
+  gap: 1rem;
+}
+
+.methodology-accordion .accordion-body p {
+  margin-bottom: 0;
+}
+
+.analysis-block {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.analysis-block ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.analysis-block li + li {
+  margin-top: 0.3rem;
+}
+
+.analysis-supports {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.analysis-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid rgba(15, 76, 92, 0.12);
+  border-radius: 999px;
+  background: rgba(240, 247, 248, 0.9);
+  color: var(--site-primary);
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.drive-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.85rem;
+  width: 100%;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid rgba(15, 76, 92, 0.12);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(219, 238, 240, 0.68));
+  text-decoration: none;
+  box-shadow: 0 16px 36px rgba(28, 39, 59, 0.08);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.drive-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 40px rgba(28, 39, 59, 0.1);
+}
+
+.drive-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  padding: 0.45rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.88);
+  flex-shrink: 0;
+}
+
+.drive-icon svg {
+  width: 34px;
+  height: 34px;
+  display: block;
+}
+
+.drive-card-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+}
+
+.drive-card-label {
+  color: var(--site-primary);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.drive-card-title {
+  color: var(--site-ink);
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.drive-card-text {
+  color: var(--site-muted);
+  line-height: 1.5;
+}
+
 .overview-visual {
   display: flex;
   align-items: stretch;
@@ -640,6 +854,16 @@ a:hover {
   color: var(--site-primary);
 }
 
+@media (max-width: 1180px) {
+  .source-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .methodology-step-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-banner {
     margin-top: 0.5rem;
@@ -662,6 +886,10 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
+  .drive-card {
+    align-items: flex-start;
+  }
+
   .scope-carousel-footer,
   .scope-nav {
     flex-direction: column;
@@ -670,6 +898,14 @@ a:hover {
 
   .scope-nav-button {
     width: 100%;
+  }
+
+  .source-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .methodology-pill-grid {
+    grid-template-columns: 1fr;
   }
 
   .timeline-shell {
