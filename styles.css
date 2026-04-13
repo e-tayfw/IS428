@@ -938,7 +938,6 @@ a:hover {
 /* ─── Methodology Long-form Page ─── */
 
 .methodology-intro {
-  max-width: 52rem;
   margin: 1.5rem 0 1.25rem;
   padding: 1.5rem 1.6rem;
   border: 1px solid var(--site-line);
@@ -952,7 +951,6 @@ a:hover {
 }
 
 .methodology-analyses {
-  max-width: 52rem;
   margin-bottom: 1rem;
 }
 
@@ -965,7 +963,6 @@ a:hover {
 }
 
 .methodology-questions {
-  max-width: 52rem;
   margin-bottom: 1.5rem;
   padding: 1.25rem 1.5rem;
   border-left: 4px solid var(--site-primary);
@@ -1057,6 +1054,11 @@ a:hover {
 }
 
 /* Quarto TOC theming */
+.sidebar.toc-left,
+.sidebar.margin-sidebar {
+  padding-left: 2.5rem;
+}
+
 .sidebar nav[role="doc-toc"] {
   padding: 1rem 0;
 }
@@ -1128,15 +1130,6 @@ main.content h3 {
   letter-spacing: -0.02em;
 }
 
-/* Ordered list styling inside methodology content */
-main.content > ol,
-main.content > ul {
-  max-width: 52rem;
-}
-
-main.content > p {
-  max-width: 52rem;
-}
 
 @media (max-width: 768px) {
   .data-table-wrapper {

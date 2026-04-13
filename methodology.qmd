@@ -34,7 +34,7 @@ h. What are the three predictions of who the next Oceanus Folk stars will be ove
 
 ---
 
-## Career Trajectory Analysis
+## 3.1) Career Trajectory Analysis
 
 In this analysis, we utilise two networks to cover an appropriate analysis of Sailor Shift's career trajectory:
 
@@ -45,7 +45,7 @@ This analysis establishes the career trajectory baseline that subsequent analyse
 
 A single visualisation network cannot effectively communicate both the structural shape of a career and its temporal development. Structural relationships (who connects to whom, through what types of edges) are best shown through a force-directed ego network, while temporal patterns (when releases happened, how output changed over time) require a chronological axis that a force-directed layout cannot provide. The two visualisations were therefore designed as complementary views of the same underlying data.
 
-### Simplified Ego Network
+### 3.1.1) Simplified Ego Network
 
 Visualisation 1 serves as the structural overview of Sailor Shift's entire career ecosystem. Its purpose is to answer: *what entities make up the career network, how are they related, and what is the overall scale and shape of the professional ecosystem?*
 
@@ -84,7 +84,7 @@ The ego network was chosen as the graph form because it naturally places the sub
 
 **Ordered Graph Layout:** To add a more chronological structure, we use an ordered graph layout. This allows a temporal overview of how Sailor Shift and her direct collaborators work on different songs and albums over time. The scaling factor was set to a minimal of less than 0.01 to keep nodes close to Sailor Shift and provide a better overview when exporting the graph.
 
-### Temporal Release Timeline
+### 3.1.2) Temporal Release Timeline
 
 The second visualisation shows the chronological narrative of Sailor Shift's career. Its purpose is to answer: *how did release output change over time, when were the periods of emergence, breakthrough, consolidation, and maturity, which releases achieved notable status, and where did genre experimentation occur?*
 
@@ -125,11 +125,11 @@ The ego network filtering approach was used with a second filter to retain only 
 
 ---
 
-## Influence and Lineage Analysis
+## 3.2) Influence and Lineage Analysis
 
 This analysis investigates the lineage of artistic influence surrounding Sailor Shift: who shaped her artistic development, who she subsequently influenced, and how far her cultural impact extends through the Oceanus Folk ecosystem. While the Career Trajectory analysis showed influence connections as peripheral edges in a broader career network, this analysis isolates the influence dimension entirely and extends it beyond Sailor Shift's immediate neighbourhood to reveal the deeper lineage structure.
 
-### Temporal Stacked Bar Chart of Sailor Shift's Inspirations
+### 3.2.1) Temporal Stacked Bar Chart of Sailor Shift's Inspirations
 
 The objective of this visualisation is to reveal which genres and works directly shaped Sailor Shift's creative output over time, answering: *what musical traditions fed into her artistry, and how did those influences evolve across her career?*
 
@@ -152,7 +152,7 @@ Release year is used as the temporal axis, with the number of influence events a
 
 The colour palette separates warm acoustic genres from cooler electronic ones: Americana uses deep burnt orange, Indie Folk a brighter orange (shared roots in organic, acoustic traditions). Indie Rock is assigned dark crimson. Dream Pop receives soft pink and Synthwave a muted purple (electronic-adjacent, cool spectrum). "Other" is rendered in neutral taupe/grey to recede visually.
 
-### Modularity-Based Influence Network
+### 3.2.2) Modularity-Based Influence Network
 
 **Network Filtering Methodology**
 
@@ -204,11 +204,11 @@ The full MC1 dataset (17,412 nodes and 37,857 edges) was reduced in two stages:
 
 ---
 
-## Collaboration and Network Analysis
+## 3.3) Collaboration and Network Analysis
 
 This collaboration analysis examines how Sailor Shift's working relationships contributed to her career growth, her cross-community reach, and the influence that Oceanus Folk has on the wider network across different time phases. This directly addresses Project Objective 3 and supports the later rising-star and future-star analyses by showing why collaboration breadth, repeated ties, and bridge position matter in a music ecosystem.
 
-### Sailor Shift Collaboration Networks
+### 3.3.1) Sailor Shift Collaboration Networks
 
 This analysis examines who Sailor Shift actually worked with across her career, how collaboration clusters formed and evolved, and whether any collaborators overlap with the influence network identified in the Lineage and Influence Analysis.
 
@@ -290,7 +290,7 @@ Even in a collaborative network studying connections between people and musical 
 </div>
 ```
 
-### Sailor Shift Collaboration Timeline
+### 3.3.2) Sailor Shift Collaboration Timeline
 
 The objective of this visualisation is to view who Sailor Shift collaborated with over a timeline from a more granular perspective, to gain insights on which works she collaborated on, which genres, and which collaborators exactly.
 
@@ -338,11 +338,11 @@ A dashed vertical reference line at 2028 marks Sailor Shift's breakthrough year,
 
 ---
 
-## Genre Diffusion and Evolution Analysis
+## 3.4) Genre Diffusion and Evolution Analysis
 
 The objective here is to move from Sailor Shift's network and work timeline into the broader Oceanus Folk community, asking: *"Was Oceanus Folk influence intermittent or did it have a gradual rise?"* We also focus granularly on Oceanus Folk's influence on specific genres and artists to understand the impact that Oceanus Folk has on the broader music industry.
 
-### Oceanus Folk Outward Diffusion Across Genres Timeline
+### 3.4.1) Oceanus Folk Outward Diffusion Across Genres Timeline
 
 **Python Script -- CSV Generation**
 
@@ -358,7 +358,7 @@ Source Year is placed on Columns as a continuous dimension (2007--2038). SUM(Eve
 
 A single teal colour is used (same hue assigned to Oceanus Folk in the collaboration timeline) at reduced opacity. A dashed vertical reference line at 2027 anchors attention: the peak diffusion event (39 outward events) occurs in 2027 -- one year *before* Sailor Shift's personal breakthrough -- and this temporal offset is itself the central insight.
 
-### Genres Most Influenced by Oceanus Folk (Pre and Post Breakthrough)
+### 3.4.2) Genres Most Influenced by Oceanus Folk (Pre and Post Breakthrough)
 
 Oceanus Folk's influence on other genres was identified using a frequency-based outward influence methodology:
 
@@ -370,7 +370,7 @@ Oceanus Folk's influence on other genres was identified using a frequency-based 
 
 Presenting the top five genres in side-by-side bar charts makes it possible to compare both the magnitude and ranking of influence across time, revealing whether the same recipient genres remained dominant or whether Oceanus Folk's outward reach shifted after its rise.
 
-### Top Artists Most Influenced by Oceanus Folk
+### 3.4.3) Top Artists Most Influenced by Oceanus Folk
 
 The objective is to look at Oceanus Folk's influence from a different perspective: not *what* Oceanus Folk influenced, but *who* it influenced in the music industry.
 
@@ -388,7 +388,7 @@ The output CSV contains one row per unique combination of artist, influenced wor
 
 Artists are placed on rows, count of rows on columns. An artist filter selects the top artists by influence events. Artist Dominant Genre is placed on Colour, partitioning each bar into stacked segments by genre. The palette assigns distinct hues: Desert Rock (orange), Indie Folk (lavender/lilac), Lo-Fi Electronica (deep navy), Space Rock (muted purple/mauve), and Synthwave (brown/taupe). The teal reserved for Oceanus Folk does not appear since all artists in the chart are recipients of its influence.
 
-### Inward Evolution of Oceanus Folk
+### 3.4.4) Inward Evolution of Oceanus Folk
 
 After examining outward diffusion, we ask the inverse: *"Which non-Oceanus Folk works did Oceanus Folk draw from, and from which genres exactly?"* This directionality reversal helps understand the bidirectional influence between Oceanus Folk and the broader music industry.
 
@@ -412,6 +412,6 @@ Two dashed vertical reference lines are carried forward from the outward diffusi
 
 ---
 
-## Rising Star and Emergent Artist Analysis
+## 3.5) Rising Star and Emergent Artist Analysis
 
 This analysis identifies the characteristics associated with breakout success by comparing artist trajectories, network patterns, and influence dynamics across the Oceanus Folk ecosystem. It uses these characteristics to evaluate emerging artists and predict likely future stars within the ecosystem.
