@@ -10,7 +10,7 @@ This page describes the datasets used in the project and the data preparation pi
 
 ```{=html}
 <section class="section-card methodology-card">
-  <h2>Data Sources</h2>
+  <h2>Original Data Sources</h2>
   <p class="methodology-lead">The original data source provided contains 2 CSV files made up of approximately 17,000 nodes and 37,000 edges. We used these CSV files for exploratory analysis and also utilised Python scripts to generate targeted CSV files for temporal analysis in Tableau.</p>
 
   <div class="source-grid">
@@ -56,52 +56,59 @@ This page describes the datasets used in the project and the data preparation pi
 </section>
 
 <section class="section-card methodology-card">
-  <h2>Data Preparation</h2>
+  <h2>Generated Data Sources</h2>
   <p class="methodology-lead">With such a large dataset, we utilised Python scripts to generate CSV files for targeted analysis. For each generated CSV, we used Tableau to create temporal visualisations rather than snapshot network analysis. The Python scripts can be downloaded from our project artefacts and include comments explaining what each script does. The table below maps each Python script to the CSV it generates and the corresponding methodology section.</p>
 
-  <div class="data-table-wrapper">
-    <table class="methodology-table">
-      <thead>
-        <tr>
-          <th>No.</th>
-          <th>Python Script</th>
-          <th>CSV Generated</th>
-          <th>Methodology Section</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td><code>extract_tableau_sailor_influence_timeline.py</code></td>
-          <td><code>sailor_shift_inward_influence_timeline.csv</code></td>
-          <td><a href="methodology.html#temporal-stacked-bar-chart-of-sailor-shifts-inspirations">Section 3.2.1</a></td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td><code>extract_tableau_sailor_collaboration_timeline.py</code></td>
-          <td><code>tableau_sailor_collaboration_timeline.csv</code></td>
-          <td><a href="methodology.html#sailor-shift-collaboration-timeline">Section 3.3.2</a></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td><code>extract_tableau_oceanus_outward_genre_year.py</code></td>
-          <td><code>tableau_oceanus_outward_genre_year.csv</code></td>
-          <td><a href="methodology.html#oceanus-folk-outward-diffusion-across-genres-timeline">Section 3.4.1</a></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td><code>extract_tableau_oceanus_outward_artist_year.py</code></td>
-          <td><code>of_outward_influence_by_artist.csv</code></td>
-          <td><a href="methodology.html#top-artists-most-influenced-by-oceanus-folk">Section 3.4.3</a></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td><code>extract_tableau_oceanus_inward_genre_year.py</code></td>
-          <td><code>tableau_oceanus_inward_genre_year.csv</code></td>
-          <td><a href="methodology.html#inward-evolution-of-oceanus-folk">Section 3.4.4</a></td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="source-grid source-grid--generated">
+    <article class="source-card">
+      <span class="source-label">Influence Timeline</span>
+      <h3>sailor_shift_inward_influence_timeline.csv</h3>
+      <p>Generated from <code>extract_tableau_sailor_influence_timeline.py</code>. Used in <a href="methodology.html#temporal-stacked-bar-chart-of-sailor-shifts-inspirations">Section 3.2.1</a>.</p>
+      <a class="python-script-link" href="https://drive.google.com/drive/folders/1qIYVJlC53OkHSYCazWDLy4NCuLSGOeZB?usp=drive_link" target="_blank" rel="noopener noreferrer" title="View Python scripts on Google Drive">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        <span>Python Scripts</span>
+      </a>
+    </article>
+
+    <article class="source-card">
+      <span class="source-label">Collaboration Timeline</span>
+      <h3>tableau_sailor_collaboration_timeline.csv</h3>
+      <p>Generated from <code>extract_tableau_sailor_collaboration_timeline.py</code>. Used in <a href="methodology.html#sailor-shift-collaboration-timeline">Section 3.3.2</a>.</p>
+      <a class="python-script-link" href="https://drive.google.com/drive/folders/1qIYVJlC53OkHSYCazWDLy4NCuLSGOeZB?usp=drive_link" target="_blank" rel="noopener noreferrer" title="View Python scripts on Google Drive">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        <span>Python Scripts</span>
+      </a>
+    </article>
+
+    <article class="source-card">
+      <span class="source-label">Outward Genre Diffusion</span>
+      <h3>tableau_oceanus_outward_genre_year.csv</h3>
+      <p>Generated from <code>extract_tableau_oceanus_outward_genre_year.py</code>. Used in <a href="methodology.html#oceanus-folk-outward-diffusion-across-genres-timeline">Section 3.4.1</a>.</p>
+      <a class="python-script-link" href="https://drive.google.com/drive/folders/1qIYVJlC53OkHSYCazWDLy4NCuLSGOeZB?usp=drive_link" target="_blank" rel="noopener noreferrer" title="View Python scripts on Google Drive">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        <span>Python Scripts</span>
+      </a>
+    </article>
+
+    <article class="source-card">
+      <span class="source-label">Outward Artist Influence</span>
+      <h3>of_outward_influence_by_artist.csv</h3>
+      <p>Generated from <code>extract_tableau_oceanus_outward_artist_year.py</code>. Used in <a href="methodology.html#top-artists-most-influenced-by-oceanus-folk">Section 3.4.3</a>.</p>
+      <a class="python-script-link" href="https://drive.google.com/drive/folders/1qIYVJlC53OkHSYCazWDLy4NCuLSGOeZB?usp=drive_link" target="_blank" rel="noopener noreferrer" title="View Python scripts on Google Drive">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        <span>Python Scripts</span>
+      </a>
+    </article>
+
+    <article class="source-card">
+      <span class="source-label">Inward Genre Evolution</span>
+      <h3>tableau_oceanus_inward_genre_year.csv</h3>
+      <p>Generated from <code>extract_tableau_oceanus_inward_genre_year.py</code>. Used in <a href="methodology.html#inward-evolution-of-oceanus-folk">Section 3.4.4</a>.</p>
+      <a class="python-script-link" href="https://drive.google.com/drive/folders/1qIYVJlC53OkHSYCazWDLy4NCuLSGOeZB?usp=drive_link" target="_blank" rel="noopener noreferrer" title="View Python scripts on Google Drive">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        <span>Python Scripts</span>
+      </a>
+    </article>
   </div>
 </section>
 ```

@@ -6,7 +6,7 @@ toc-depth: 3
 ---
 
 ::: {.methodology-intro}
-Our methodology breaks down all 7 project objectives into 5 main analysis questions. These questions guide the design and development of visualisations that allow users to explore Sailor Shift's career, understand the spread and evolution of Oceanus Folk, and identify artist characteristics associated with breakout success.
+Our methodology is structured around 5 analysis objectives that guide the design and development of visualisations. These allow users to explore Sailor Shift's career, understand the spread and evolution of Oceanus Folk, and identify artist characteristics associated with breakout success.
 :::
 
 ::: {.methodology-analyses}
@@ -17,19 +17,6 @@ The five analyses are:
 - **Sailor Shift Collaboration and Network Analysis** — examines how collaboration networks, band affiliations, and production relationships contribute to visibility, career momentum, and cross-community influence.
 - **Oceanus Folk Genre Diffusion and Evolution Analysis** — explores the outward diffusion of Oceanus Folk across artists and genres, as well as the inward evolution of the genre itself.
 - **Emerging Artist and Rising Star Analysis** — identifies characteristics associated with breakout success by comparing artist trajectories, network patterns, and influence dynamics.
-:::
-
-::: {.methodology-questions}
-These 5 analyses cover the following questions:
-
-a. Who has Sailor Shift been most influenced by over time?
-b. Who has she collaborated with and directly or indirectly influenced?
-c. How has she influenced collaborators and the broader Oceanus Folk community?
-d. Was Oceanus Folk's influence intermittent or did it have a gradual rise?
-e. What genres and top artists have been most influenced by Oceanus Folk?
-f. How has Oceanus Folk changed with the rise of Sailor Shift? From which genres does it draw most of its contemporary inspiration?
-g. What comparison can we make between 3 artists' career rise in popularity and influence?
-h. What are the three predictions of who the next Oceanus Folk stars will be over the next five years?
 :::
 
 ---

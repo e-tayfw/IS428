@@ -9,12 +9,6 @@ page-layout: full
 ## Studying Sailor Shift's Influence in the Music Industry
 
 Tracing Sailor Shift's rise, collaboration network, and the global spread of Oceanus Folk through visual analytics.
-
-::: {.hero-actions}
-[Proposal](proposal.qmd)
-[Methodology](methodology.qmd)
-[Poster](poster.qmd)
-:::
 :::
 
 ::: {.overview-grid}
@@ -122,11 +116,27 @@ Outline the problem statement, objectives, project scope, and expected outcome.
 :::
 
 ::: {.feature-card}
+### Data
+
+Explore the original and generated data sources powering the analysis pipeline.
+
+[Go to data](data.qmd){.cta-link}
+:::
+
+::: {.feature-card}
 ### Methodology
 
 Describe the dataset, workflow, analysis process, and visual analytics approach.
 
 [Go to methodology](methodology.qmd){.cta-link}
+:::
+
+::: {.feature-card}
+### Insights
+
+View key findings, visual interpretations, and analytical conclusions.
+
+[Go to insights](insights.qmd){.cta-link}
 :::
 
 ::: {.feature-card}

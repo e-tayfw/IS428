@@ -76,8 +76,8 @@ main.content {
 .hero-banner {
   position: relative;
   overflow: hidden;
-  margin: 1.5rem 0 2.5rem;
-  padding: clamp(1.75rem, 4vw, 3rem);
+  margin: 1.5rem 0 2rem;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
   border: 1px solid rgba(15, 76, 92, 0.12);
   border-radius: var(--site-radius-lg);
   background:
@@ -114,22 +114,22 @@ main.content {
 .hero-banner h3,
 .hero-banner p,
 .hero-banner li {
-  color: #f8fafc;
+  color: #f8fafc !important;
 }
 
 .hero-banner h2 {
   margin-top: 0;
-  margin-bottom: 0.8rem;
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
   font-weight: 750;
   letter-spacing: -0.04em;
 }
 
 .hero-banner p {
   max-width: 40rem;
-  margin-bottom: 1.4rem;
+  margin-bottom: 0;
   color: rgba(248, 250, 252, 0.86);
-  font-size: 1.08rem;
+  font-size: 1rem;
 }
 
 .hero-actions {
@@ -215,17 +215,17 @@ main.content {
 .overview-visual,
 .scope-card,
 .proposal-card {
-  padding: 1.4rem;
+  padding: 1.5rem;
 }
 
 .page-intro {
-  padding: 1.5rem 1.6rem;
+  padding: 1.5rem;
   margin: 1.25rem 0 1.5rem;
 }
 
 .section-intro {
   margin: 0.5rem 0 0;
-  padding: 1.55rem 1.7rem;
+  padding: 1.5rem;
 }
 
 .section-intro h2 {
@@ -240,7 +240,7 @@ main.content {
 }
 
 .project-overview {
-  padding: 1.7rem;
+  padding: 1.5rem;
 }
 
 .project-overview p:last-child {
@@ -248,7 +248,7 @@ main.content {
 }
 
 .proposal-card {
-  padding: 1.65rem;
+  padding: 1.5rem;
 }
 
 .proposal-card h2 {
@@ -272,7 +272,7 @@ main.content {
 
 .methodology-card {
   width: 100%;
-  padding: 1.55rem;
+  padding: 1.5rem;
   margin-top: 1.35rem;
 }
 
@@ -291,7 +291,7 @@ main.content {
   flex-direction: column;
   justify-content: flex-start;
   height: 100%;
-  padding: 1.15rem;
+  padding: 1.25rem;
   border: 1px solid rgba(15, 76, 92, 0.1);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.74);
@@ -321,6 +321,32 @@ main.content {
 
 .source-card p:last-child {
   margin-bottom: 0;
+}
+
+.source-grid--generated {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.python-script-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.75rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid rgba(15, 76, 92, 0.16);
+  border-radius: 999px;
+  background: rgba(240, 247, 248, 0.9);
+  color: var(--site-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.python-script-link:hover {
+  transform: translateY(-1px);
+  background: var(--site-primary-soft);
+  color: #0b3f4c;
 }
 
 .methodology-pill-grid {
@@ -418,7 +444,7 @@ main.content {
   gap: 1rem;
   margin-top: 0.85rem;
   width: 100%;
-  padding: 1.1rem 1.2rem;
+  padding: 1.25rem;
   border: 1px solid rgba(15, 76, 92, 0.12);
   border-radius: 18px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(219, 238, 240, 0.68));
@@ -531,7 +557,7 @@ main.content {
 
 .scope-slide {
   min-height: 280px;
-  padding: 1.65rem;
+  padding: 1.5rem;
 }
 
 .scope-card::before {
@@ -626,7 +652,7 @@ main.content {
 
 .proposal-accordion .accordion-button {
   gap: 0.95rem;
-  padding: 1.2rem 1.35rem;
+  padding: 1.25rem 1.5rem;
   background: rgba(255, 255, 255, 0.72);
   color: var(--site-ink);
   font-weight: 700;
@@ -646,7 +672,7 @@ main.content {
 }
 
 .proposal-accordion .accordion-body {
-  padding: 0 1.35rem 1.25rem;
+  padding: 0 1.5rem 1.5rem;
 }
 
 .proposal-accordion .accordion-body p {
@@ -670,7 +696,7 @@ main.content {
 
 .timeline-shell {
   margin: 1.5rem 0 2rem;
-  padding: 1.35rem;
+  padding: 1.5rem;
   border: 1px solid var(--site-line);
   border-radius: var(--site-radius-lg);
   background: var(--site-surface);
@@ -1233,8 +1259,49 @@ body:has(.sidebar.toc-right) main.content {
   max-width: 52rem;
 }
 
+/* ─── Poster Page ─── */
+
+.poster-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0.5rem 0 2rem;
+  padding: 0;
+}
+
+.poster-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--site-line);
+  border-radius: var(--site-radius-md);
+  box-shadow: var(--site-shadow);
+}
+
+.poster-download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(15, 76, 92, 0.16);
+  border-radius: 999px;
+  background: var(--site-primary-soft);
+  color: var(--site-primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.poster-download-link:hover {
+  transform: translateY(-1px);
+  background: #c8e6ea;
+  color: #0b3f4c;
+}
+
 @media (max-width: 768px) {
   .insights-links-bar {
     flex-direction: column;
   }
+
 }
