@@ -1,255 +1,417 @@
 ---
 title: "Methodology"
+toc: true
+toc-location: right
+toc-depth: 3
 ---
 
-::: {.page-intro}
-[Approach and workflow]{.muted-label}
-
-This page summarizes the datasets, analysis focus, and workflow used in the project.
+::: {.methodology-intro}
+Our methodology breaks down all 7 project objectives into 5 main analysis questions. These questions guide the design and development of visualisations that allow users to explore Sailor Shift's career, understand the spread and evolution of Oceanus Folk, and identify artist characteristics associated with breakout success.
 :::
 
+::: {.methodology-analyses}
+The five analyses are:
+
+- **Sailor Shift Career Trajectory Analysis** — examines the temporal development of an artist's career, including periods of emergence, breakthrough, consolidation, and expansion.
+- **Sailor Shift Influence and Lineage Analysis** — examines the lineage of artistic influence within the music ecosystem, considering both incoming and outgoing influences.
+- **Sailor Shift Collaboration and Network Analysis** — examines how collaboration networks, band affiliations, and production relationships contribute to visibility, career momentum, and cross-community influence.
+- **Oceanus Folk Genre Diffusion and Evolution Analysis** — explores the outward diffusion of Oceanus Folk across artists and genres, as well as the inward evolution of the genre itself.
+- **Emerging Artist and Rising Star Analysis** — identifies characteristics associated with breakout success by comparing artist trajectories, network patterns, and influence dynamics.
+:::
+
+::: {.methodology-questions}
+These 5 analyses cover the following questions:
+
+a. Who has Sailor Shift been most influenced by over time?
+b. Who has she collaborated with and directly or indirectly influenced?
+c. How has she influenced collaborators and the broader Oceanus Folk community?
+d. Was Oceanus Folk's influence intermittent or did it have a gradual rise?
+e. What genres and top artists have been most influenced by Oceanus Folk?
+f. How has Oceanus Folk changed with the rise of Sailor Shift? From which genres does it draw most of its contemporary inspiration?
+g. What comparison can we make between 3 artists' career rise in popularity and influence?
+h. What are the three predictions of who the next Oceanus Folk stars will be over the next five years?
+:::
+
+---
+
+## Career Trajectory Analysis
+
+In this analysis, we utilise two networks to cover an appropriate analysis of Sailor Shift's career trajectory:
+
+1. Overview of Sailor Shift's Direct Network
+2. Temporal Structured Network Graph of Sailor Shift's Direct Connections
+
+This analysis establishes the career trajectory baseline that subsequent analyses (Influence, Collaboration, Genre Diffusion, Artist Comparison) will contextualise and explain. Each subsequent analysis addresses different dimensions of the career trajectory through distinct methodological approaches.
+
+A single visualisation network cannot effectively communicate both the structural shape of a career and its temporal development. Structural relationships (who connects to whom, through what types of edges) are best shown through a force-directed ego network, while temporal patterns (when releases happened, how output changed over time) require a chronological axis that a force-directed layout cannot provide. The two visualisations were therefore designed as complementary views of the same underlying data.
+
+### Simplified Ego Network
+
+Visualisation 1 serves as the structural overview of Sailor Shift's entire career ecosystem. Its purpose is to answer: *what entities make up the career network, how are they related, and what is the overall scale and shape of the professional ecosystem?*
+
+The ego network was chosen as the graph form because it naturally places the subject artist at the centre and arranges all connected entities around her based on the strength and type of their relationships, in chronological order from left to right. This produces an intuitive layout that communicates career structure at a glance.
+
 ```{=html}
-<section class="section-card methodology-card">
-  <h2>Data Sources</h2>
-  <p class="methodology-lead">The project uses four core files to describe the music knowledge graph, its entities, and its relationships.</p>
-
-  <div class="source-grid">
-    <article class="source-card">
-      <span class="source-label">Raw graph</span>
-      <h3>MC1_graph.json</h3>
-      <p>Complete graph of artists, genres, releases, and links.</p>
-    </article>
-
-    <article class="source-card">
-      <span class="source-label">Edges table</span>
-      <h3>mc1_edges.csv</h3>
-      <p>Relationship table for collaborations, influence, and band links.</p>
-    </article>
-
-    <article class="source-card">
-      <span class="source-label">Nodes table</span>
-      <h3>mc1_nodes.csv</h3>
-      <p>Entity table for artists, bands, releases, genres, and attributes.</p>
-    </article>
-
-    <article class="source-card">
-      <span class="source-label">Reference doc</span>
-      <h3>VAST 2025 MC1 Data Description.docx</h3>
-      <p>Schema reference for file structure, fields, node types, and edge types.</p>
-    </article>
-  </div>
-
-  <a class="drive-card" href="https://drive.google.com/drive/folders/1mfKNpFC0zFvP9mVG6L05X8QQdNyGdFnq?usp=drive_link" target="_blank" rel="noopener noreferrer">
-    <span class="drive-icon" aria-hidden="true">
-      <svg viewBox="0 0 87.3 78" role="img" focusable="false">
-        <path fill="#0F9D58" d="M6.6 67.5 30.7 25.8h20.9L27.5 67.5z"/>
-        <path fill="#FFC107" d="M56.6 67.5H27.5l24.1-41.7h29.1z"/>
-        <path fill="#1976D2" d="M46.7 10.5 70.8 52.2 56.6 67.5 32.5 25.8z"/>
-      </svg>
-    </span>
-    <span class="drive-card-copy">
-      <span class="drive-card-label">Google Drive Repository</span>
-      <span class="drive-card-title">Open shared project folder</span>
-      <span class="drive-card-text">Access the dataset directory, supporting files, and working materials for the project.</span>
-    </span>
-  </a>
-</section>
-
-<section class="section-card methodology-card">
-  <h2>Analysis Approach</h2>
-  <p class="methodology-lead">The analytical focus is organized into five linked studies. Click each item to expand the scope, purpose, and supporting tasks.</p>
-
-  <div class="accordion proposal-accordion methodology-accordion" id="methodologyAnalysisAccordion">
-    <div class="accordion-item">
-      <h3 class="accordion-header" id="analysisOneHeading">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#analysisOne" aria-expanded="true" aria-controls="analysisOne">
-          <span class="objective-number">01</span>
-          <span>Career Trajectory Analysis</span>
-        </button>
-      </h3>
-      <div id="analysisOne" class="accordion-collapse collapse show" aria-labelledby="analysisOneHeading" data-bs-parent="#methodologyAnalysisAccordion">
-        <div class="accordion-body">
-          <p>This analysis examines the temporal development of an artist’s career, including emergence, breakthrough, consolidation, and expansion across time.</p>
-
-          <div class="analysis-block">
-            <span class="source-label">It covers</span>
-            <ul>
-              <li>release history</li>
-              <li>popularity growth</li>
-              <li>career phases and timeline shifts</li>
-              <li>genre transitions</li>
-              <li>major milestones and inflection points</li>
-            </ul>
-          </div>
-
-          <div class="analysis-block">
-            <span class="source-label">This supports</span>
-            <div class="analysis-supports">
-              <span class="analysis-tag">T1 Characterize Sailor Shift's career trajectory</span>
-              <span class="analysis-tag">Part of T6 rising star profile</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h3 class="accordion-header" id="analysisTwoHeading">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#analysisTwo" aria-expanded="false" aria-controls="analysisTwo">
-          <span class="objective-number">02</span>
-          <span>Influence and Lineage Analysis</span>
-        </button>
-      </h3>
-      <div id="analysisTwo" class="accordion-collapse collapse" aria-labelledby="analysisTwoHeading" data-bs-parent="#methodologyAnalysisAccordion">
-        <div class="accordion-body">
-          <p>This analysis investigates the lineage of artistic influence within the music ecosystem, including both incoming influences that shaped Sailor and outgoing influences that reflect her wider impact.</p>
-
-          <div class="analysis-block">
-            <span class="source-label">It covers</span>
-            <ul>
-              <li>who influenced Sailor</li>
-              <li>who Sailor influenced</li>
-              <li>direct and indirect influence paths</li>
-              <li>genre-level influence lineage</li>
-              <li>changes in influence across career phases</li>
-            </ul>
-          </div>
-
-          <div class="analysis-block">
-            <span class="source-label">This supports</span>
-            <div class="analysis-supports">
-              <span class="analysis-tag">T2 Trace incoming and outgoing influence</span>
-              <span class="analysis-tag">Part of T4 diffusion</span>
-              <span class="analysis-tag">Part of T5 genre evolution</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h3 class="accordion-header" id="analysisThreeHeading">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#analysisThree" aria-expanded="false" aria-controls="analysisThree">
-          <span class="objective-number">03</span>
-          <span>Collaboration and Network Analysis</span>
-        </button>
-      </h3>
-      <div id="analysisThree" class="accordion-collapse collapse" aria-labelledby="analysisThreeHeading" data-bs-parent="#methodologyAnalysisAccordion">
-        <div class="accordion-body">
-          <p>This analysis examines how collaboration networks, band affiliations, and production relationships contribute to artist visibility, career momentum, and cross-community influence.</p>
-
-          <div class="analysis-block">
-            <span class="source-label">It covers</span>
-            <ul>
-              <li>collaborators</li>
-              <li>bandmate relationships</li>
-              <li>producers and industry ties</li>
-              <li>network centrality</li>
-              <li>bridging across genres or communities</li>
-            </ul>
-          </div>
-
-          <div class="analysis-block">
-            <span class="source-label">This supports</span>
-            <div class="analysis-supports">
-              <span class="analysis-tag">T3 Role of collaboration</span>
-              <span class="analysis-tag">Part of T6 rising star profile</span>
-              <span class="analysis-tag">Part of T7 future stars</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h3 class="accordion-header" id="analysisFourHeading">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#analysisFour" aria-expanded="false" aria-controls="analysisFour">
-          <span class="objective-number">04</span>
-          <span>Genre Diffusion and Evolution Analysis</span>
-        </button>
-      </h3>
-      <div id="analysisFour" class="accordion-collapse collapse" aria-labelledby="analysisFourHeading" data-bs-parent="#methodologyAnalysisAccordion">
-        <div class="accordion-body">
-          <p>This analysis explores the outward diffusion of Oceanus Folk across artists and genres, as well as the inward evolution of the genre under changing cultural and commercial conditions.</p>
-
-          <div class="analysis-block">
-            <span class="source-label">It covers</span>
-            <ul>
-              <li>spread of Oceanus Folk across the music world</li>
-              <li>whether diffusion was gradual or bursty</li>
-              <li>which genres and artists were most influenced</li>
-              <li>how Oceanus Folk changed over time</li>
-              <li>incoming inspirations into contemporary Oceanus Folk</li>
-            </ul>
-          </div>
-
-          <div class="analysis-block">
-            <span class="source-label">This supports</span>
-            <div class="analysis-supports">
-              <span class="analysis-tag">T4 diffusion of Oceanus Folk</span>
-              <span class="analysis-tag">T5 evolution of Oceanus Folk</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h3 class="accordion-header" id="analysisFiveHeading">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#analysisFive" aria-expanded="false" aria-controls="analysisFive">
-          <span class="objective-number">05</span>
-          <span>Emerging Artist and Rising Star Analysis</span>
-        </button>
-      </h3>
-      <div id="analysisFive" class="accordion-collapse collapse" aria-labelledby="analysisFiveHeading" data-bs-parent="#methodologyAnalysisAccordion">
-        <div class="accordion-body">
-          <p>This analysis identifies the characteristics associated with breakout success by comparing artist trajectories, network patterns, and influence dynamics across the Oceanus Folk ecosystem.</p>
-
-          <div class="analysis-block">
-            <span class="source-label">It covers</span>
-            <ul>
-              <li>features that define a rising star</li>
-              <li>comparison of selected artists</li>
-              <li>momentum indicators</li>
-              <li>identification of promising future Oceanus Folk artists</li>
-            </ul>
-          </div>
-
-          <div class="analysis-block">
-            <span class="source-label">This supports</span>
-            <div class="analysis-supports">
-              <span class="analysis-tag">T6 rising star profile</span>
-              <span class="analysis-tag">T7 forecast future stars</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-card methodology-card">
-  <h2>Tools and Workflow</h2>
-  <p class="methodology-lead">The workflow links source data, network analysis, and presentation into a single project pipeline.</p>
-
-  <div class="methodology-step-grid">
-    <article class="methodology-step">
-      <span class="source-label">Step 01</span>
-      <h3>Source review</h3>
-      <p>Inspect the graph files and schema reference to understand entities, relationships, and coverage.</p>
-    </article>
-
-    <article class="methodology-step">
-      <span class="source-label">Step 02</span>
-      <h3>Focused analysis</h3>
-      <p>Study trajectory, influence, collaboration, and genre spread through targeted network views.</p>
-    </article>
-
-    <article class="methodology-step">
-      <span class="source-label">Step 03</span>
-      <h3>Project delivery</h3>
-      <p>Document methods and communicate findings through the Quarto website and project poster.</p>
-    </article>
-  </div>
-</section>
+<div class="data-table-wrapper">
+  <table class="methodology-table">
+    <thead>
+      <tr>
+        <th>Channel</th>
+        <th>Attribute</th>
+        <th>Encoding Detail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Node Colour</td>
+        <td>Node Type (Partition)</td>
+        <td>Person = blue/purple, Album = orange/salmon, Song = green, MusicalGroup = teal/green, RecordLabel = blue. Allows instant identification of what each node represents.</td>
+      </tr>
+      <tr>
+        <td>Node Size</td>
+        <td>Degree (Ranking)</td>
+        <td>Min = 5, Max = 30. Sailor Shift is the largest node (highest degree, ~30+ connections). Albums and songs are medium to small. External influence groups are smallest. Creates clear visual hierarchy.</td>
+      </tr>
+      <tr>
+        <td>Edge Colour</td>
+        <td>Edge Type (Partition)</td>
+        <td>Creative edges (PerformerOf, LyricistOf) in muted pink/salmon. Influence edges (InStyleOf, InterpolatesFrom, LyricalReferenceTo) in distinct bright colours. Creates a two-tier visual system where structural connections are subtle and influence connections pop.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 ```
+
+**Ordered Graph Layout:** To add a more chronological structure, we use an ordered graph layout. This allows a temporal overview of how Sailor Shift and her direct collaborators work on different songs and albums over time. The scaling factor was set to a minimal of less than 0.01 to keep nodes close to Sailor Shift and provide a better overview when exporting the graph.
+
+### Temporal Release Timeline
+
+The second visualisation shows the chronological narrative of Sailor Shift's career. Its purpose is to answer: *how did release output change over time, when were the periods of emergence, breakthrough, consolidation, and maturity, which releases achieved notable status, and where did genre experimentation occur?*
+
+While Visualisation 1 shows *what exists* in the career network, Visualisation 2 shows *when it happened*. The structural ego network layout cannot communicate temporal patterns because ForceAtlas 2 positions nodes based on edge attraction and repulsion, not chronology.
+
+The ego network filtering approach was used with a second filter to retain only Sailor Shift and all songs and albums directly related to her. This isolates the release timeline from the structural ecosystem, stripping away collaborators, groups, and institutional relationships that are not relevant to the temporal question. The resulting filtered graph contains 39 nodes: Sailor Shift connected to 21 album nodes and 17 song nodes.
+
+```{=html}
+<div class="data-table-wrapper">
+  <table class="methodology-table">
+    <thead>
+      <tr>
+        <th>Channel</th>
+        <th>Attribute</th>
+        <th>Encoding Detail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Node Colour</td>
+        <td>Genre (Partition)</td>
+        <td>Oceanus Folk = light neon blue, Synthwave = purple, Americana = gold/orange, N/A = grey (Sailor Shift). Genre was chosen over release year for colour because it makes the two non-Oceanus-Folk experiments visually pop against the dominant majority.</td>
+      </tr>
+      <tr>
+        <td>Node Size</td>
+        <td>Notability (Ranking)</td>
+        <td>A numeric <code>notable_num</code> column was created (TRUE = 3, FALSE = 1, Sailor Shift = 5) because Gephi's Ranking requires numeric input. Notable releases appear large, non-notable releases appear small.</td>
+      </tr>
+      <tr>
+        <td>Edge Colour</td>
+        <td>Uniform grey</td>
+        <td>All edges set to light grey (#CCCCCC) at 20% opacity. Edges are not analytically meaningful in the timeline &mdash; they only connect Sailor Shift to each release.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+
+---
+
+## Influence and Lineage Analysis
+
+This analysis investigates the lineage of artistic influence surrounding Sailor Shift: who shaped her artistic development, who she subsequently influenced, and how far her cultural impact extends through the Oceanus Folk ecosystem. While the Career Trajectory analysis showed influence connections as peripheral edges in a broader career network, this analysis isolates the influence dimension entirely and extends it beyond Sailor Shift's immediate neighbourhood to reveal the deeper lineage structure.
+
+### Temporal Stacked Bar Chart of Sailor Shift's Inspirations
+
+The objective of this visualisation is to reveal which genres and works directly shaped Sailor Shift's creative output over time, answering: *what musical traditions fed into her artistry, and how did those influences evolve across her career?*
+
+**Python Script -- CSV Generation**
+
+Sailor Shift (ID 17255) is a Person node with no genre of her own, so her musical identity was inferred through the works she created and the sources those works drew from. The script operates in two main stages:
+
+1. It identifies all of Sailor Shift's works by traversing the three main creative role edges (PerformerOf, LyricsOf, ComposerOf) outward from her Person node.
+2. It queries the four influence edge types -- InStyleOf, InterpolatesFrom, LyricalReferenceTo, and DirectlySamples -- filtering only the edges whose source is one of those 38 works. This directionality is critical: an influence edge's source is the work that was influenced, and its target is the work it drew from.
+
+The result captures all inward influence events spanning 2024--2038 across release years. For each event, the script records:
+
+- Source Work's Name and Release Year
+- Target Influence Name
+- Target Node Genre
+
+**Tableau Stacked Bar Chart Construction**
+
+Release year is used as the temporal axis, with the number of influence events as the vertical axis. Genres are consolidated into Genre Groups because the raw data contains 12 distinct genres but only 20 events. Indie Rock, Indie Folk, Dream Pop, Americana, and Synthwave are retained as named groups; all remaining genres are collapsed into "Other."
+
+The colour palette separates warm acoustic genres from cooler electronic ones: Americana uses deep burnt orange, Indie Folk a brighter orange (shared roots in organic, acoustic traditions). Indie Rock is assigned dark crimson. Dream Pop receives soft pink and Synthwave a muted purple (electronic-adjacent, cool spectrum). "Other" is rendered in neutral taupe/grey to recede visually.
+
+### Modularity-Based Influence Network
+
+**Network Filtering Methodology**
+
+The full MC1 dataset (17,412 nodes and 37,857 edges) was reduced in two stages:
+
+1. A Degree Type Range filter (minimum 1) to remove orphaned nodes.
+2. A global edge type partition filter retaining only influence relationship types -- InStyleOf (38.1%), InterpolatesFrom (28.57%), LyricalReferenceTo (25.4%), and DirectlySamples (7.94%) -- removing all creative role and institutional edges.
+3. An Ego Network filter centred on Sailor Shift (ID 17255) at depth 3.
+
+**Why depth 3?** Depth 1 only shows Sailor Shift and her ~10 directly connected influence entities. Depth 2 extends to connections of those entities, revealing shared upstream sources and downstream follower clusters. Depth 3 added only 2 additional nodes, confirming that depth 2 already captured nearly the complete influence neighbourhood. Depth 3 was retained at minimal cost for completeness, yielding a 41-node graph.
+
+**Why influence edges only?** The analysis question asks specifically about artistic influence lineage. Creative role edges show who worked on what, not who influenced whom, and would pull in Album and Song nodes that add structural noise without influence information.
+
+**Statistics Used for Encoding**
+
+- **Modularity as Node Colour:** Gephi's Modularity community detection algorithm identified five communities based purely on the structure of influence connections. This avoids imposing predetermined role categories.
+- **In-Degree as Node Size:** Measures how many influence edges point toward each node -- a direct measure of how frequently an entity is referenced, emulated, interpolated from, or sampled.
+
+```{=html}
+<div class="data-table-wrapper">
+  <table class="methodology-table">
+    <thead>
+      <tr>
+        <th>Channel</th>
+        <th>Attribute</th>
+        <th>Encoding Detail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Node Colour</td>
+        <td>Modularity (resolution = 1.0)</td>
+        <td>Community detection algorithm defines node colours based on different communities.</td>
+      </tr>
+      <tr>
+        <td>Node Size</td>
+        <td>In-Degree (Ranking)</td>
+        <td>Ranking and labelling the size of a node based on the magnitude of the node's In-degree.</td>
+      </tr>
+      <tr>
+        <td>Edge Colour</td>
+        <td>Uniform Grey</td>
+        <td>Focusing on influence edges only, keeping the network graph readable.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+
+---
+
+## Collaboration and Network Analysis
+
+This collaboration analysis examines how Sailor Shift's working relationships contributed to her career growth, her cross-community reach, and the influence that Oceanus Folk has on the wider network across different time phases. This directly addresses Project Objective 3 and supports the later rising-star and future-star analyses by showing why collaboration breadth, repeated ties, and bridge position matter in a music ecosystem.
+
+### Sailor Shift Collaboration Networks
+
+This analysis examines who Sailor Shift actually worked with across her career, how collaboration clusters formed and evolved, and whether any collaborators overlap with the influence network identified in the Lineage and Influence Analysis.
+
+**Filtering Chain:**
+
+```{=html}
+<div class="data-table-wrapper">
+  <table class="methodology-table">
+    <thead>
+      <tr>
+        <th>Filter</th>
+        <th>Setting</th>
+        <th>Rationale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Edge Type Partition</td>
+        <td>PerformerOf, LyricistOf, ComposerOf, MemberOf</td>
+        <td>The four edge types that connect a Person to a Work they were credited on. Two artists sharing edges to the same Album/Song are collaborators.</td>
+      </tr>
+      <tr>
+        <td>Ego Network</td>
+        <td>Sailor Shift (ID 17255), Depth 3</td>
+        <td>Depth 1 reaches Sailor Shift's albums/songs. Depth 2 reaches other artists credited on those same works. Depth 3 discovers hidden connections between collaborators and songs.</td>
+      </tr>
+      <tr>
+        <td>Degree Range</td>
+        <td>Min 1</td>
+        <td>Removes orphaned nodes.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+
+Even in a collaborative network studying connections between people and musical groups, we retain albums and songs within the network. Creative-role edges connect Person → Album/Song, not Person → Person. Two artists are collaborators because they both have edges to the same album. Removing albums collapses the graph to just 5 nodes. Albums serve as visual bridges and must remain, but are styled to recede.
+
+**Visual Encoding:**
+
+```{=html}
+<div class="data-table-wrapper">
+  <table class="methodology-table">
+    <thead>
+      <tr>
+        <th>Channel</th>
+        <th>Setting</th>
+        <th>Rationale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Node Colour</td>
+        <td>Node Type (Partition)</td>
+        <td>Colour encoding follows Section 3.1 for standardisation.</td>
+      </tr>
+      <tr>
+        <td>Node Size (Degree View)</td>
+        <td>Degree (Ranking)</td>
+        <td>Min = 7, Max = 150. Albums and Songs kept tiny, Person and Musical Groups kept large to represent collaboration hubs.</td>
+      </tr>
+      <tr>
+        <td>Node Size (Betweenness View)</td>
+        <td>Betweenness Centrality (Ranking)</td>
+        <td>Shows which nodes and individuals are important &ldquo;bridges&rdquo; between communities, essential in connecting the entire musical industry together.</td>
+      </tr>
+      <tr>
+        <td>Edge Colour</td>
+        <td>Uniform Grey</td>
+        <td>Not analytically meaningful &mdash; we want to view who is connected rather than what the connection is.</td>
+      </tr>
+      <tr>
+        <td>Labels</td>
+        <td>Proportional Size</td>
+        <td>High Degree (sized nodes) get readable labels.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+
+### Sailor Shift Collaboration Timeline
+
+The objective of this visualisation is to view who Sailor Shift collaborated with over a timeline from a more granular perspective, to gain insights on which works she collaborated on, which genres, and which collaborators exactly.
+
+**Python Script -- CSV Generation**
+
+The script uses a two-hop traversal centred on Sailor Shift (ID 17255):
+
+1. First, the script identifies all works connected to Sailor Shift through the three creative role edge types (PerformerOf, LyricistOf, ComposerOf), where Sailor Shift is the source and the work is the target.
+2. Second, for each work, it collects all other nodes that also hold a creative-role edge pointing to the same work. These co-contributors are Sailor Shift's collaborators.
+3. For each collaboration event, the output CSV captures the collaborator's name, the shared work name, release year, genre, and the creative role edge type held.
+
+This structure -- one row per collaborator-per-work-per-role -- allows us to view collaboration intensity and map it across time. The logic differs from the influence script: the collaboration script follows creative-role edges inward toward the same works to find who else participated, whereas the influence script follows influence edges outward.
+
+**Tableau -- Collaboration Timeline Construction**
+
+The visualisation uses a bubble matrix, placing Year on columns and Collaborator on rows as a discrete dimension. Each intersection represents a collaboration event.
+
+```{=html}
+<div class="data-table-wrapper">
+  <table class="methodology-table">
+    <thead>
+      <tr>
+        <th>Encoding Type</th>
+        <th>Feature</th>
+        <th>Rationale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Size</td>
+        <td>Count of Collaborators</td>
+        <td>Highlights high-intensity collaborations immediately.</td>
+      </tr>
+      <tr>
+        <td>Colour</td>
+        <td>Collaboration Genre</td>
+        <td>Teal for Oceanus Folk (oceanic thematic identity). Warm orange for Americana (consistent with earlier charts). Vivid green for Synthwave (visually separate as the sole electronic genre). Coral/salmon for Celtic Folk, deeper green for Sea Shanties, and desaturated steel blue for Acoustic Folk.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+
+A dashed vertical reference line at 2028 marks Sailor Shift's breakthrough year, partitioning the chart into an early collaborative phase (2024--2027) and a mature career phase (2028 onward). Annotations highlight key collaborative works: *The Kelp Forest Canticles* (2024) as a massive 8-artist collaboration, and *Tidal Pop Waves*, *Tide of Echos*, *Neon Heartbeat*, and *Melancholy Circuitry* as notable milestones.
+
+---
+
+## Genre Diffusion and Evolution Analysis
+
+The objective here is to move from Sailor Shift's network and work timeline into the broader Oceanus Folk community, asking: *"Was Oceanus Folk influence intermittent or did it have a gradual rise?"* We also focus granularly on Oceanus Folk's influence on specific genres and artists to understand the impact that Oceanus Folk has on the broader music industry.
+
+### Oceanus Folk Outward Diffusion Across Genres Timeline
+
+**Python Script -- CSV Generation**
+
+The script shifts the analytical lens from Sailor Shift as an individual to Oceanus Folk as a genre, asking *how far and how fast did Oceanus Folk's musical DNA spread into other genres over time?* The logic operates in three steps:
+
+1. **Identify all Oceanus Folk works** by filtering the nodes table directly on the genre column. This bypasses the artist entirely to capture the full ecosystem of Oceanus Folk production.
+2. **Query outward influence edges** where the target is one of the Oceanus Folk works. An edge whose target is an Oceanus Folk work means the source work drew from Oceanus Folk -- representing outward diffusion. CoverOf is included here (unlike the Sailor Shift inward analysis) because a cover of an Oceanus Folk song by an artist in another genre is itself evidence of cross-genre diffusion. This yields 377 total influence edges.
+3. **Filter out intra-genre influence** -- removing edges where the source work is also Oceanus Folk. The visualisation's purpose is to measure outward reach beyond the genre's own ecosystem. Each remaining edge is aggregated by source work's release year, genre, and edge type, producing a 154-row CSV.
+
+**Tableau -- Diffusion Area Chart Construction**
+
+Source Year is placed on Columns as a continuous dimension (2007--2038). SUM(Events) is placed on Rows, aggregating all cross-genre influence events per year regardless of genre -- the chart intentionally collapses all 16 recipient genres into a single area to foreground total volume of diffusion.
+
+A single teal colour is used (same hue assigned to Oceanus Folk in the collaboration timeline) at reduced opacity. A dashed vertical reference line at 2027 anchors attention: the peak diffusion event (39 outward events) occurs in 2027 -- one year *before* Sailor Shift's personal breakthrough -- and this temporal offset is itself the central insight.
+
+### Genres Most Influenced by Oceanus Folk (Pre and Post Breakthrough)
+
+Oceanus Folk's influence on other genres was identified using a frequency-based outward influence methodology:
+
+1. The network was filtered to the five influence edge types: InStyleOf, InterpolatesFrom, LyricalReferenceTo, DirectlySamples, and CoverOf.
+2. Only outward cases were kept (target work = Oceanus Folk, source work = non-Oceanus genre), isolating works that drew influence from Oceanus Folk.
+3. Each influence event was assigned to the genre of the receiving non-Oceanus work.
+4. Distinct outward influence edges were counted for each receiving genre.
+5. The data was divided into **pre-breakthrough** (2026 and earlier) and **post-breakthrough** (2027 and later) periods.
+
+Presenting the top five genres in side-by-side bar charts makes it possible to compare both the magnitude and ranking of influence across time, revealing whether the same recipient genres remained dominant or whether Oceanus Folk's outward reach shifted after its rise.
+
+### Top Artists Most Influenced by Oceanus Folk
+
+The objective is to look at Oceanus Folk's influence from a different perspective: not *what* Oceanus Folk influenced, but *who* it influenced in the music industry.
+
+**Python Script -- CSV Generation**
+
+The script answers: *which individual artists are most frequently influenced by Oceanus Folk?* Since influence edges connect works to works, the script adopts a three-stage traversal:
+
+1. **Stage 1:** Replicates the outward influence filter from the diffusion script. Selects edges whose type is one of the five influence types, whose target node's genre is "Oceanus Folk", and whose source node's genre is not Oceanus Folk and is not null.
+2. **Stage 2:** For each influenced work, follows creative-credit edges inward to identify all Person and MusicalGroup nodes credited on the work. MemberOf is included because musical groups may be credited via group membership rather than direct performer/composer credits.
+3. **Stage 3:** Derives each artist's dominant genre. Since the MC1 dataset stores genre on works, not on Person/MusicalGroup nodes, the script infers an artist's primary genre from their body of work by taking the most frequent genre. This is cached in each artist row.
+
+The output CSV contains one row per unique combination of artist, influenced work, Oceanus Folk source work, and influence type.
+
+**Tableau -- Stacked Bar Chart Construction**
+
+Artists are placed on rows, count of rows on columns. An artist filter selects the top artists by influence events. Artist Dominant Genre is placed on Colour, partitioning each bar into stacked segments by genre. The palette assigns distinct hues: Desert Rock (orange), Indie Folk (lavender/lilac), Lo-Fi Electronica (deep navy), Space Rock (muted purple/mauve), and Synthwave (brown/taupe). The teal reserved for Oceanus Folk does not appear since all artists in the chart are recipients of its influence.
+
+### Inward Evolution of Oceanus Folk
+
+After examining outward diffusion, we ask the inverse: *"Which non-Oceanus Folk works did Oceanus Folk draw from, and from which genres exactly?"* This directionality reversal helps understand the bidirectional influence between Oceanus Folk and the broader music industry.
+
+**Python Script -- Inward Diffusion**
+
+The script is the mirror image of the outward diffusion script:
+
+1. Identifies all influence edges where the source node's genre is "Oceanus Folk" (meaning the Oceanus Folk work is doing the referencing) and the target node's genre is not Oceanus Folk and is not null. This is the exact inverse of the outward diffusion filter.
+2. Each event is aggregated by: the source work's release year (when the Oceanus Folk work that did the borrowing was released), the target work's genre (the genre being drawn from), and the edge type.
+
+**Tableau -- Small Multiples Trellis Area Chart**
+
+The visualisation uses a small multiples layout -- one area chart per genre -- to compare temporal patterns without visual clutter.
+
+- Source Year on Columns as a continuous dimension (shared temporal axis)
+- Target Genre on Rows as a discrete dimension (creates row-based small multiples)
+- A zero-filled calculated field `ZN(SUM([Events]))` ensures years with no events display as zero rather than gaps
+- Colour palette assigns visually distinct hues to the top 7 genres: Indie Folk receives teal/seafoam (dominant feeder genre), with other genres using contrasting colours
+
+Two dashed vertical reference lines are carried forward from the outward diffusion chart: 2027 ("Oceanus Folk Outward Diffusion Peak") and 2028 ("Sailor Shift Breakthrough"), providing consistent temporal anchors.
+
+---
+
+## Rising Star and Emergent Artist Analysis
+
+This analysis identifies the characteristics associated with breakout success by comparing artist trajectories, network patterns, and influence dynamics across the Oceanus Folk ecosystem. It uses these characteristics to evaluate emerging artists and predict likely future stars within the ecosystem.

@@ -1,6 +1,12 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - index.qmd
+    - proposal.qmd
+    - data.qmd
+    - methodology.qmd
+    - poster.qmd
 
 website:
   title: "IS428"
@@ -10,6 +16,8 @@ website:
         href: index.qmd
       - text: Proposal
         href: proposal.qmd
+      - text: Data
+        href: data.qmd
       - text: Methodology
         href: methodology.qmd
       - text: Poster
