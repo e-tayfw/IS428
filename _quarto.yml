@@ -6,6 +6,7 @@ project:
     - proposal.qmd
     - data.qmd
     - methodology.qmd
+    - insights.qmd
     - poster.qmd
 
 website:
@@ -20,11 +21,13 @@ website:
         href: data.qmd
       - text: Methodology
         href: methodology.qmd
+      - text: Insights
+        href: insights.qmd
       - text: Poster
         href: poster.qmd
   page-footer:
     left: "MC1 | Visual Analytics Project"
-    right: "Sailor Shift, Oceanus Folk, and collaboration networks"
+    right: "Authors: Hann Danish, Leong Rui Tao, Ethan Tay Fu Wen"
 
 format:
   html:

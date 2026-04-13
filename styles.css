@@ -1151,3 +1151,90 @@ main.content h3 {
     padding: 1rem 1.15rem;
   }
 }
+
+/* ─── Insights Page ─── */
+
+.insights-links-bar {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0 1.25rem;
+}
+
+.insights-link-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex: 1;
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(15, 76, 92, 0.12);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(219, 238, 240, 0.68));
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(28, 39, 59, 0.07);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.insights-link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(28, 39, 59, 0.1);
+  text-decoration: none;
+}
+
+.insights-link-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0.4rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.88);
+  flex-shrink: 0;
+}
+
+.insights-link-icon svg {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.insights-link-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+}
+
+.insights-link-label {
+  color: var(--site-primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.insights-link-title {
+  color: var(--site-ink);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.insights-figure {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 14px;
+  border: 1px solid var(--site-line);
+  box-shadow: 0 8px 24px rgba(28, 39, 59, 0.06);
+}
+
+/* Widen content area for insights and methodology pages */
+body:has(.sidebar.toc-right) main.content {
+  max-width: 52rem;
+}
+
+@media (max-width: 768px) {
+  .insights-links-bar {
+    flex-direction: column;
+  }
+}
