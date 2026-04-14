@@ -16,9 +16,7 @@
 body {
   font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
   color: var(--site-ink);
-  background:
-    radial-gradient(circle at top left, rgba(15, 76, 92, 0.10), transparent 28%),
-    linear-gradient(180deg, #fcfbf8 0%, var(--site-bg) 100%);
+  background: var(--site-bg);
 }
 
 .navbar {
@@ -70,7 +68,7 @@ li {
 }
 
 main.content {
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
 }
 
 .hero-banner {
@@ -591,28 +589,6 @@ main.content {
   justify-content: space-between;
   gap: 1rem;
   margin-top: 0.9rem;
-}
-
-.scope-indicators {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-}
-
-.scope-indicators button {
-  width: 11px;
-  height: 11px;
-  padding: 0;
-  border: 0;
-  border-radius: 999px;
-  background: rgba(15, 76, 92, 0.22);
-  transition: transform 160ms ease, background 160ms ease;
-}
-
-.scope-indicators button.active,
-.scope-indicators button:hover {
-  background: var(--site-primary);
-  transform: scale(1.1);
 }
 
 .scope-nav {

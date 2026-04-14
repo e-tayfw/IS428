@@ -81,15 +81,6 @@ This project focus on building visual analytics insights to explore Sailor Shift
   </div>
 
   <div class="scope-carousel-footer">
-    <div class="scope-indicators">
-      <button type="button" data-bs-target="#scopeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Go to scope card 1"></button>
-      <button type="button" data-bs-target="#scopeCarousel" data-bs-slide-to="1" aria-label="Go to scope card 2"></button>
-      <button type="button" data-bs-target="#scopeCarousel" data-bs-slide-to="2" aria-label="Go to scope card 3"></button>
-      <button type="button" data-bs-target="#scopeCarousel" data-bs-slide-to="3" aria-label="Go to scope card 4"></button>
-      <button type="button" data-bs-target="#scopeCarousel" data-bs-slide-to="4" aria-label="Go to scope card 5"></button>
-      <button type="button" data-bs-target="#scopeCarousel" data-bs-slide-to="5" aria-label="Go to scope card 6"></button>
-    </div>
-
     <div class="scope-nav">
       <button class="scope-nav-button" type="button" data-bs-target="#scopeCarousel" data-bs-slide="prev">Previous</button>
       <button class="scope-nav-button" type="button" data-bs-target="#scopeCarousel" data-bs-slide="next">Next</button>
