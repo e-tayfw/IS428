@@ -913,3 +913,112 @@ Beatrice Albright matches Daniel O'Connell on total degree (15) and notable work
 Genevieve Bell has a smaller output profile than the first two predictions, with 4 works and 2 notable, last releasing in 2031. However she carries the same 2 influence edges including a DirectlySamples connection, which is the strongest form of influence in the dataset. The fact that another artist has directly sampled her recorded output suggests her work has already gained a level of recognition within the ecosystem despite the smaller release count. Her stage name Lux Ravenna points to a formed artistic identity, and her exclusively Oceanus Folk output keeps her firmly within the genre. The gap in releases since 2031 is a risk factor, but the presence of influence edges suggests her existing work is still circulating and accumulating recognition within the community.
 
 These three artists currently sit in network positions that resemble Maya Jensen's pre-2033 state, with active output, early influence signals and growing degree, but none has yet developed the cross-community betweenness that defines an established star. That is precisely where Sailor Shift stood before 2028, which is what makes these three the most likely candidates for the next Oceanus Folk breakthrough.
+
+---
+
+## 5) Extensions & Future Works
+
+::: {.methodology-intro}
+These future works identify potential extensions which can further strengthen the analytical depth and reliability of our model to identify data-driven characteristics of breakout success and predict breakout stars.
+:::
+
+### 5.1) Temporal Network Animation
+
+```{=html}
+<div class="future-work-card">
+  <div class="future-work-icon">
+    <!-- Play button + dotted timeline (temporal animation) -->
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 4l13 8-13 8V4z" fill="currentColor" fill-opacity="0.12"/>
+      <path d="M5 4l13 8-13 8V4z"/>
+      <line x1="2" y1="22" x2="22" y2="22" stroke-dasharray="3 2" stroke-width="1.5"/>
+      <circle cx="5" cy="22" r="1.6" fill="currentColor" stroke="none"/>
+      <circle cx="12" cy="22" r="1.6" fill="currentColor" stroke="none"/>
+      <circle cx="19" cy="22" r="1.6" fill="currentColor" stroke="none"/>
+      <line x1="5"  y1="20.4" x2="5"  y2="18.5" stroke-width="1.5"/>
+      <line x1="12" y1="20.4" x2="12" y2="17"   stroke-width="1.5"/>
+      <line x1="19" y1="20.4" x2="19" y2="18.5" stroke-width="1.5"/>
+    </svg>
+  </div>
+  <div class="future-work-content">
+    <p class="future-work-desc">
+      We can implement temporal network animation to show how collaboration and influence spread across the network year by year. This would make it easier to observe structural changes over time, identify inflection points such as Sailor Shift's 2028 breakthrough, and track how artists move from peripheral to more central positions — showing that their influence in the global network is increasing.
+    </p>
+    <div class="future-work-tools">
+      <span class="future-work-tools-label">Suggested Tools &amp; Methods</span>
+      <ul class="future-work-tags">
+        <li>Gephi — Timeline Plugin</li>
+        <li>D3.js — Force-Directed Animation</li>
+        <li>vis.js — Timeline</li>
+        <li>Python — NetworkX + Matplotlib FuncAnimation</li>
+        <li>Pyvis — Interactive Network</li>
+      </ul>
+    </div>
+  </div>
+</div>
+```
+
+### 5.2) Sentiment and Lyrical Analysis
+
+```{=html}
+<div class="future-work-card">
+  <div class="future-work-icon">
+    <!-- Microphone (lyrical/sentiment analysis) -->
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="2" width="6" height="11" rx="3"/>
+      <path d="M5 10a7 7 0 0014 0"/>
+      <line x1="12" y1="19" x2="12" y2="22"/>
+      <line x1="8"  y1="22" x2="16" y2="22"/>
+      <path d="M7.5 7c.4-1.2 1.7-2 3-1.8" stroke-width="1.4" opacity="0.45"/>
+    </svg>
+  </div>
+  <div class="future-work-content">
+    <p class="future-work-desc">
+      Currently, our study focuses on structural network features. In the future, we can incorporate sentiment and lyrical analysis to trace how musical themes and artistic identity are evolving alongside shifts in genre. This would complement and deepen our findings on collaboration and influence by revealing the thematic content driving those structural patterns.
+    </p>
+    <div class="future-work-tools">
+      <span class="future-work-tools-label">Suggested Tools &amp; Methods</span>
+      <ul class="future-work-tags">
+        <li>VADER — Sentiment Scoring</li>
+        <li>TextBlob — Polarity &amp; Subjectivity</li>
+        <li>spaCy / NLTK — NLP Pipeline</li>
+        <li>Hugging Face Transformers — BERT Sentiment</li>
+        <li>Genius API — Lyrics Data Collection</li>
+        <li>BERTopic — Topic Modelling</li>
+      </ul>
+    </div>
+  </div>
+</div>
+```
+
+### 5.3) Longitudinal Validation of Rising Star Predictions
+
+```{=html}
+<div class="future-work-card">
+  <div class="future-work-icon">
+    <!-- Trending-up line chart + check (longitudinal validation) -->
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="2 17 8 11 12 14.5 20 6"/>
+      <polyline points="16 6 20 6 20 10"/>
+      <circle cx="5.5" cy="20.5" r="3" stroke-width="1.6"/>
+      <path d="M4.2 20.5l1 1 2.2-2.2" stroke-width="1.6"/>
+      <line x1="11" y1="20.5" x2="22" y2="20.5" stroke-width="1.5" stroke-dasharray="2.5 1.8"/>
+    </svg>
+  </div>
+  <div class="future-work-content">
+    <p class="future-work-desc">
+      The predictions of the future rising stars in section 4.5.3 are based on current network signals, but their accuracy can only be validated with time. A future implementation could track the predicted artists longitudinally and evaluate the growth of their degree, influence, and output. We can then compare their growth patterns with Sailor Shift's pre-breakthrough career trajectory to further validate our predictions.
+    </p>
+    <div class="future-work-tools">
+      <span class="future-work-tools-label">Suggested Tools &amp; Methods</span>
+      <ul class="future-work-tags">
+        <li>Python — pandas + NetworkX Metrics</li>
+        <li>Jupyter Notebooks — Longitudinal Tracking</li>
+        <li>Gephi — Periodic Network Snapshots</li>
+        <li>Tableau — Temporal Trend Charts</li>
+        <li>Cosine Similarity — Trajectory Comparison</li>
+      </ul>
+    </div>
+  </div>
+</div>
+```
