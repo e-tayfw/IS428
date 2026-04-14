@@ -799,7 +799,7 @@ The most strongly influenced artists are Qiang Qian, Xiuying Qian and Min He, ea
 
 At the same time, the artist-level pattern is not identical across all genres. Although Indie Folk weakens relative to Desert Rock and Dream Pop during the rise window, artists such as Cosmic Drift and Lei Shen remain strongly shaped by Oceanus Folk, each with six influence events. This suggests that even where genre-level influence softened, certain artists continued to sustain strong connections to Oceanus Folk. Overall, the artist results reinforce the broader interpretation that Oceanus Folk's rise was both genre-wide and selectively concentrated, with some genres absorbing its influence broadly while others were shaped through a smaller number of highly responsive artists.
 
-### 4.4.3) Inward Evolution of Oceanus Folk
+### 4.4.2) Inward Evolution of Oceanus Folk
 
 Outward spread is only half of the story. Figure 11 illustrates how Oceanus Folk evolved inward by absorbing non-Oceanus influences through explicit work-to-work relationships in the dataset. Inward influence is defined here as cases where an Oceanus Folk song or album references a non-Oceanus work through edge types such as InStyleOf, CoverOf, InterpolatesFrom, LyricalReferenceTo and DirectlySamples. Across the full period, Indie Folk remains the most consistent external source of inward inspiration, indicating that Oceanus Folk was never a sealed or static tradition. Even before its wider expansion, the genre was already being shaped by a substantial external influence base.
 
@@ -807,7 +807,7 @@ Outward spread is only half of the story. Figure 11 illustrates how Oceanus Folk
 
 Oceanus Folk did not simply creep into the musical mainstream; it arrived in distinct, intermittent surges. **For years, the genre was anchored almost exclusively to Indie Folk, which provided the vast majority of its covers, samples, and lyrical references**. However, the true transformation of the genre occurred alongside the Sailor Shift movement in 2028. Following Oceanus Folk's explosive peak of outward influence in 2027, the genre broke free from its Indie Folk constraints. As Sailor Shift pushed Oceanus Folk into the cultural spotlight with her breakthrough (refer to Section 4.1.2 to witness temporal career trajectory of songs and albums), the genre began absorbing a radically diverse array of sounds --- from Dream Pop to Synthwave. This reveals the true legacy of the Sailor Shift era: it was not just a period of geographic or commercial spreading, but a moment of profound internal diversification where Oceanus Folk was entirely reshaped by the weight of its own visibility.
 
-### 4.4.7) Summary of Analysis 4
+### 4.4.3) Summary of Analysis 4
 
 Taken together, the evidence suggests that Oceanus Folk's rise was driven by two linked processes. First, the genre diffused outward in intermittent surges, peaking sharply in the late 2020s and spreading most strongly into Desert Rock, Dream Pop and Space Rock. Second, this outward rise coincided with a diversification of inward borrowing, especially beyond its earlier Indie Folk and Synthwave roots. The result is that Oceanus Folk appears not as a static genre that simply became more popular, but as a genre that expanded by changing. Its rise was supported both by outward influence on neighbouring genres and by inward absorption of a broader external soundscape.
 

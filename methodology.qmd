@@ -401,4 +401,199 @@ Two dashed vertical reference lines are carried forward from the outward diffusi
 
 ## 3.5) Rising Star and Emergent Artist Analysis
 
-This analysis identifies the characteristics associated with breakout success by comparing artist trajectories, network patterns, and influence dynamics across the Oceanus Folk ecosystem. It uses these characteristics to evaluate emerging artists and predict likely future stars within the ecosystem.
+In the earlier sections, we focused on Sailor Shift's career trajectory, influence nodes and ego network. In this section we decide to build on these findings to help identify future stars. Therefore we carry out a controlled comparison approach, focusing on artists who share a common starting point with Sailor Shift.
+
+The methodology is divided into three stages:
+
+1. Candidate identification by filtering through the Oceanus Folk & Sailor Shift ecosystem
+2. Ego network construction for selected artists
+3. Artist comparison and prediction of future stars
+
+### 3.5.1) Candidate Subgraph Construction
+
+The objective of this step is to construct a focused network containing Oceanus Folk artists and their immediate collaboration and influence environment. This serves as the candidate pool from which emerging artists are selected for deeper analysis.
+
+**Network Filtering Methodology**
+
+The full MC1 dataset (17,000+ nodes, 37,000+ edges) was reduced using a multi-stage filtering approach:
+
+```{=html}
+<div class="data-table-wrapper">
+  <table class="methodology-table">
+    <thead>
+      <tr>
+        <th>Filter</th>
+        <th>Setting</th>
+        <th>Rationale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Genre Filter</td>
+        <td>Oceanus Folk (works)</td>
+        <td>Restricts analysis to the relevant musical ecosystem</td>
+      </tr>
+      <tr>
+        <td>Node Type Filter</td>
+        <td>Person + MusicalGroup + Works</td>
+        <td>Retains artists and their associated works for structural context</td>
+      </tr>
+      <tr>
+        <td>Edge Type Partition</td>
+        <td>PerformerOf, LyricistOf, MemberOf, InStyleOf, InterpolatesFrom, LyricalReferenceTo, CoverOf</td>
+        <td>Captures both collaboration and influence relationships</td>
+      </tr>
+      <tr>
+        <td>Degree Range</td>
+        <td>Min = 1</td>
+        <td>Removes orphaned nodes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+
+This filtered graph produces a connected collaboration-influence subgraph centred around Sailor Shift, representing the active Oceanus Folk ecosystem.
+
+**Purpose of Subgraph**
+
+Unlike earlier ego networks, this graph is not centred on a single artist but instead provides a global structural overview of:
+
+- Collaboration clusters (bands and groups)
+- Influence relationships between works
+- Proximity of emerging artists to established hubs
+
+This allows for identification of candidate artists embedded within active network regions, rather than selecting artists arbitrarily.
+
+### 3.5.2) Candidate Selection Strategy
+
+From the filtered subgraph, three artists — **Maya Jensen, Lila "Lilly" Hartman, and Jade Thompson** — were selected for deeper analysis.
+
+**Selection Criteria**
+
+The selection was based on three structural conditions observed in the subgraph:
+
+1. **Proximity to Sailor Shift's Network** — All three artists are directly connected through Ivy Echoes and shared works, placing them within Sailor Shift's immediate collaboration ecosystem.
+2. **Presence within Active Clusters** — The selected artists are embedded within dense collaboration clusters, indicating participation in ongoing musical activity rather than isolated nodes.
+3. **Variation in Network Spread** — While structurally similar, the three artists exhibit differences in network reach (number of connected works and collaborators), making them suitable for comparative analysis.
+
+This ensures that the comparison is controlled and meaningful, as all three artists share a common origin but differ in career progression.
+
+### 3.5.3) Ego Network Construction for Artist Comparison
+
+To evaluate each candidate artist in detail, ego networks were constructed for each selected artist.
+
+**Ego Network Filtering Methodology**
+
+For each artist, the following filter chain was applied:
+
+```{=html}
+<div class="data-table-wrapper">
+  <table class="methodology-table">
+    <thead>
+      <tr>
+        <th>Filter</th>
+        <th>Setting</th>
+        <th>Rationale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ego Network</td>
+        <td>Artist ID (Depth = 2)</td>
+        <td>Captures both direct works and second-degree collaborators</td>
+      </tr>
+      <tr>
+        <td>Edge Type Partition</td>
+        <td>PerformerOf, LyricistOf, MemberOf, InStyleOf, InterpolatesFrom, LyricalReferenceTo, CoverOf</td>
+        <td>Retains both collaboration and influence relationships</td>
+      </tr>
+      <tr>
+        <td>Degree Range</td>
+        <td>Min = 1</td>
+        <td>Removes disconnected nodes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+
+**Why Depth 2?**
+
+- **Depth 1**: Only shows direct works &mdash; too limited
+- **Depth 2**: Includes collaborators and related works &mdash; captures full career neighbourhood
+- **Depth 3**: Adds minimal additional nodes but increases clutter
+
+Thus, depth 2 provides the best balance between **completeness and readability**.
+
+### 3.5.4) Network Metrics and Feature Extraction
+
+For each ego network, **key centrality metrics** were computed using **Gephi's Statistics panel**:
+
+```{=html}
+<div class="data-table-wrapper">
+  <table class="methodology-table">
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>Interpretation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Degree Centrality</td>
+        <td>Measures collaboration reach (number of connections)</td>
+      </tr>
+      <tr>
+        <td>PageRank</td>
+        <td>Measures quality of incoming influence</td>
+      </tr>
+      <tr>
+        <td>Betweenness Centrality</td>
+        <td>Measures bridging position between clusters</td>
+      </tr>
+      <tr>
+        <td>Node Count / Edge Count</td>
+        <td>Measures overall network size and complexity</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+
+In addition, work-level attributes were extracted:
+
+- Number of notable works
+- Most recent release date
+- Most recent notoriety date
+
+These features allow both **structural and temporal evaluation** of each artist's career progression.
+
+### 3.5.5) Rising Star Profile Definition
+
+Based on insights from Sections 3.1 to 3.4, a rising star profile was defined using four measurable indicators:
+
+1. **Expanding Network Size** &mdash; Increasing number of nodes and edges indicates growing collaboration reach
+2. **High PageRank** &mdash; Strong incoming connections from influential works indicate quality influence
+3. **Bridge Position (Betweenness)** &mdash; Ability to connect different clusters enables cross-community exposure
+4. **Recent Activity** &mdash; Ongoing releases and recent notoriety indicate sustained momentum
+
+This profile is derived directly from Sailor Shift's pre-breakthrough trajectory, ensuring that the model reflects **observed success patterns rather than assumptions**.
+
+### 3.5.6) Prediction of Future Rising Stars
+
+To identify future Oceanus Folk breakout artists, the full filtered dataset was analysed using ranking-based selection.
+
+**Selection Methodology**
+
+- Person nodes were sorted by **PageRank (descending)**
+- Only non-established artists **(excluding Sailor Shift and Ivy Echoes core members)** were considered
+- **Additional filters applied:**
+  - Active connections within the Oceanus Folk network
+  - Evidence of ongoing collaboration or identity formation (e.g., stage names)
+
+**Rationale**
+
+PageRank was prioritised because it captures quality of influence rather than raw quantity, aligning with the earlier finding that breakout success is driven by strong incoming connections rather than simply high output.
+
+The resulting top candidates represent artists occupying **pre-breakout structural positions**, similar to Sailor Shift before her 2028 breakthrough.
