@@ -1,6 +1,9 @@
 ---
 title: "Data Sources and Preparation"
+page-layout: full
 ---
+
+::: {.page-shell}
 
 ::: {.page-intro}
 [Data]{.muted-label}

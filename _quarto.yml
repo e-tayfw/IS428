@@ -8,6 +8,7 @@ project:
     - methodology.qmd
     - insights.qmd
     - poster.qmd
+    - about.qmd
 
 website:
   title: "IS428"
@@ -25,6 +26,9 @@ website:
         href: insights.qmd
       - text: Poster
         href: poster.qmd
+    right:
+      - text: About
+        href: about.qmd
   page-footer:
     left: "MC1 | Visual Analytics Project"
     right: "Authors: Hann Danish, Leong Rui Tao, Ethan Tay Fu Wen"

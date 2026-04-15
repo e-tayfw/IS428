@@ -137,4 +137,12 @@ Use this page to summarize the final visuals, key findings, and conclusion.
 
 [Go to poster](poster.qmd){.cta-link}
 :::
+
+::: {.feature-card}
+### About
+
+Meet the teaching professor and student team behind the project, and read our key takeaways.
+
+[Go to about](about.qmd){.cta-link}
+:::
 :::

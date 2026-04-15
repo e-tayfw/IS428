@@ -1,0 +1,98 @@
+---
+title: "About"
+page-layout: full
+---
+
+::: {.page-intro}
+[About the Project]{.muted-label}
+
+This page introduces the teaching faculty behind the module and the student team responsible for developing this Visual Analytics project on Sailor Shift and the global spread of Oceanus Folk.
+:::
+
+::: {.section-intro}
+[Teaching Faculty]{.muted-label}
+
+## Module Supervisor
+
+The IS428 Visual Analytics module, under which this project was developed, is taught by the following faculty member at Singapore Management University.
+:::
+
+::: {.people-grid .people-grid--single}
+::: {.person-card}
+![](images/about/kam-tin-seong.jpg){.person-photo fig-alt="Portrait of Professor Kam Tin Seong"}
+
+::: {.person-copy}
+[Teaching Professor]{.person-role-label}
+
+### Prof. Kam Tin Seong
+
+[Associate Professor of Information Systems]{.person-title}
+
+Professor Kam Tin Seong is the teaching professor for this Visual Analytics project. He guides the module's approach to data exploration, visual design, and analytical storytelling, and provides the methodological foundation that shaped how this project was scoped, structured, and executed.
+:::
+:::
+:::
+
+::: {.section-intro}
+[Project Authors]{.muted-label}
+
+## The Student Team
+
+This project was designed, developed, and written by the following three Year 4 students from Singapore Management University. Each team member contributed across data preparation, network construction, visual analytics development, and the final written and poster deliverables.
+:::
+
+::: {.people-grid .people-grid--three}
+::: {.person-card}
+![](images/about/hann-danish.jpg){.person-photo fig-alt="Portrait of Hann Danish Bin Mohd Nazry"}
+
+::: {.person-copy}
+[Author]{.person-role-label}
+
+### Hann Danish Bin Mohd Nazry
+
+[Year 4 Business Student]{.person-title}
+
+Singapore Management University
+:::
+:::
+
+::: {.person-card}
+![](images/about/leong-rui-tao.jpg){.person-photo fig-alt="Portrait of Leong Rui Tao"}
+
+::: {.person-copy}
+[Author]{.person-role-label}
+
+### Leong Rui Tao
+
+[Year 4 Information Systems Student]{.person-title}
+
+Singapore Management University
+:::
+:::
+
+::: {.person-card}
+![](images/about/ethan-tay.png){.person-photo fig-alt="Portrait of Ethan Tay Fu Wen"}
+
+::: {.person-copy}
+[Author]{.person-role-label}
+
+### Ethan Tay Fu Wen
+
+[Year 4 Information Systems Student]{.person-title}
+
+Singapore Management University
+:::
+:::
+:::
+
+::: {.section-intro}
+[Reflections]{.muted-label}
+
+## Key Takeaways
+
+Looking back across the full arc of this project, we walked away with a cohesive set of lessons that together reshaped how we think about visual analytics as a craft.
+:::
+
+::: {.takeaway-card}
+More data does not automatically lead to better insight, and this was especially true for graph-based visualisation where a network can contain a large volume of nodes and edges yet still fail to communicate anything meaningful if too much irrelevant information is retained, which taught us that effective visual analysis often depends on filtering the data deliberately and keeping only what is analytically important so that complexity is reduced in a way that improves clarity rather than overwhelms the viewer. Building on that, we learned to design from the viewer's perspective, since more sophisticated tools do not always produce better communication: while Gephi and network graphs are powerful for revealing relational structures and hidden connections, Tableau and conventional charts such as bar charts can communicate focused comparisons or simpler distributions more clearly and with less cognitive load, which reinforced that clarity, interpretability and appropriateness of chart type should take precedence over visual complexity and aligned closely with our report's methodology of combining graph exploration with Python-generated CSVs and Tableau views for more targeted analysis. Strong chart annotation and precise titling proved equally crucial, because a well-annotated chart can communicate its main takeaway on its own, reduce the need for long explanatory text, save poster space and improve visual hierarchy, ultimately allowing strong visual design to summarise complex research in a concise, readable and self-explanatory manner. Finally, we recognised the limitation of generative AI: although GenAI can speed up drafting, summarisation and some computational tasks, it often performs calculations and transformations opaquely and risks being accepted uncritically, which can weaken learning and analytical rigour, so we learned to use it as a support tool rather than a replacement for structured reasoning, guiding it carefully, validating intermediate steps and critically assessing whether the final output is methodologically sound and intellectually defensible.
+:::

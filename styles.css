@@ -1374,9 +1374,218 @@ body:has(.sidebar.toc-right) main.content {
   color: #0b3f4c;
 }
 
+.timeline-image-shell {
+  margin: 1.75rem auto 2.25rem;
+  padding: 1.25rem clamp(1rem, 2vw, 1.75rem);
+  max-width: 1500px;
+  border: 1px solid var(--site-line);
+  border-radius: var(--site-radius-lg);
+  background: var(--site-surface);
+  box-shadow: var(--site-shadow);
+  backdrop-filter: blur(8px);
+}
+
+.timeline-image-shell figure,
+.timeline-image-shell .figure {
+  margin: 0;
+}
+
+.proposal-timeline-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: calc(var(--site-radius-md) - 6px);
+  box-shadow: 0 16px 36px rgba(28, 39, 59, 0.08);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.timeline-image-shell figcaption {
+  margin-top: 1rem;
+  padding: 0 0.25rem;
+  color: var(--site-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.people-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.people-grid--single {
+  grid-template-columns: minmax(0, 720px);
+  justify-content: center;
+}
+
+.people-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.person-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.75rem 1.5rem;
+  border: 1px solid var(--site-line);
+  border-radius: var(--site-radius-md);
+  background: var(--site-surface);
+  box-shadow: var(--site-shadow);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.person-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 28px 60px rgba(28, 39, 59, 0.12);
+}
+
+.person-photo {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1.1rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 14px 30px rgba(15, 76, 92, 0.18);
+  background: var(--site-primary-soft);
+}
+
+.people-grid--single .person-photo {
+  width: 220px;
+  height: 220px;
+}
+
+.person-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  width: 100%;
+  text-align: center;
+}
+
+.person-copy,
+.person-copy * {
+  text-align: center !important;
+}
+
+.person-copy > *,
+.person-copy section {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.person-card section.level3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.person-card section.level3 > * {
+  width: 100%;
+}
+
+.person-card h3.anchored {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.person-card h3.anchored .anchorjs-link,
+.person-card h3 .anchorjs-link {
+  display: none !important;
+}
+
+.person-card p {
+  margin: 0;
+}
+
+.person-role-label {
+  display: inline-block;
+  align-self: center;
+  margin-bottom: 0.15rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: var(--site-primary-soft);
+  color: var(--site-primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.person-card h3 {
+  margin: 0.15rem 0 0.25rem;
+  color: var(--site-ink);
+  font-size: 1.18rem;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+}
+
+.person-title {
+  display: block;
+  color: var(--site-primary);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.person-card p {
+  margin: 0.55rem 0 0;
+  color: var(--site-muted);
+  font-size: 0.97rem;
+  line-height: 1.6;
+}
+
+.person-card p:last-child {
+  margin-bottom: 0;
+}
+
+.takeaway-card {
+  margin: 1.25rem 0 2rem;
+  padding: 1.75rem 1.85rem;
+  border: 1px solid var(--site-line);
+  border-left: 4px solid var(--site-primary);
+  border-radius: var(--site-radius-md);
+  background: var(--site-surface);
+  box-shadow: var(--site-shadow);
+  backdrop-filter: blur(8px);
+  color: var(--site-muted);
+  font-size: 1.02rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.takeaway-card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .people-grid--three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .insights-links-bar {
     flex-direction: column;
   }
 
+  .people-grid--three {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .person-photo {
+    width: 180px;
+    height: 180px;
+  }
 }
