@@ -175,6 +175,7 @@ main.content {
 
 .page-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items: stretch;
 }
 
 .content-grid {
@@ -288,11 +289,16 @@ main.content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: stretch;
   height: 100%;
   padding: 1.25rem;
   border: 1px solid rgba(15, 76, 92, 0.1);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.74);
+}
+
+.source-card p:last-child {
+  flex: 1;
 }
 
 .source-label {
@@ -309,20 +315,26 @@ main.content {
   margin-top: 0;
   margin-bottom: 0.75rem;
   color: var(--site-ink);
-  font-size: 0.92rem;
+  font-size: 0.82rem;
   font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, monospace;
   font-weight: 700;
-  line-height: 1.4;
-  letter-spacing: -0.02em;
-  overflow-wrap: anywhere;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  word-break: break-all;
 }
 
-.source-card p:last-child {
+.source-card p:last-of-type {
   margin-bottom: 0;
 }
 
 .source-grid--generated {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 768px) {
+  .source-grid--generated {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .python-script-link {
@@ -533,6 +545,25 @@ main.content {
 
 .feature-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card > p:first-of-type {
+  flex: 1;
+}
+
+.feature-card > p:last-of-type {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.feature-card .cta-link {
+  align-self: flex-start;
+}
+
+.feature-card h3.anchored .anchorjs-link {
+  display: none !important;
 }
 
 .feature-card::before {
@@ -1374,40 +1405,47 @@ body:has(.sidebar.toc-right) main.content {
   color: #0b3f4c;
 }
 
-.timeline-image-shell {
-  margin: 1.75rem auto 2.25rem;
-  padding: 1.25rem clamp(1rem, 2vw, 1.75rem);
-  max-width: 1500px;
-  border: 1px solid var(--site-line);
-  border-radius: var(--site-radius-lg);
-  background: var(--site-surface);
-  box-shadow: var(--site-shadow);
-  backdrop-filter: blur(8px);
+.page-shell {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 3vw, 2rem);
+  padding-right: clamp(1rem, 3vw, 2rem);
 }
 
-.timeline-image-shell figure,
-.timeline-image-shell .figure {
-  margin: 0;
-}
-
-.proposal-timeline-image {
-  display: block;
+.timeline-container {
   width: 100%;
   max-width: 100%;
-  height: auto;
-  border-radius: calc(var(--site-radius-md) - 6px);
-  box-shadow: 0 16px 36px rgba(28, 39, 59, 0.08);
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+  margin: 1.5rem 0 2rem;
+  padding: 0;
 }
 
-.timeline-image-shell figcaption {
-  margin-top: 1rem;
-  padding: 0 0.25rem;
-  color: var(--site-muted);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  text-align: left;
+.timeline-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.timeline-download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(15, 76, 92, 0.16);
+  border-radius: 999px;
+  background: var(--site-primary-soft);
+  color: var(--site-primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.timeline-download-link:hover {
+  transform: translateY(-1px);
+  background: #c8e6ea;
+  color: #0b3f4c;
 }
 
 .people-grid {
@@ -1548,6 +1586,32 @@ body:has(.sidebar.toc-right) main.content {
 
 .person-card p:last-child {
   margin-bottom: 0;
+}
+
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.65rem;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid rgba(10, 102, 194, 0.2);
+  border-radius: 999px;
+  background: rgba(10, 102, 194, 0.08);
+  color: #0a66c2;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.linkedin-link:hover {
+  transform: translateY(-1px);
+  background: rgba(10, 102, 194, 0.15);
+  color: #004182;
+}
+
+.linkedin-link svg {
+  flex-shrink: 0;
 }
 
 .takeaway-card {

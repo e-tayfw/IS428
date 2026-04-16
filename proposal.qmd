@@ -119,8 +119,14 @@ The objective of this project is to design and develop visualisations that allow
 The schedule below reconstructs the project plan from the proposal timeline, showing how exploration, analysis, deliverables, and meetings progress from Week 9 to Week 14.
 :::
 
-::: {.timeline-image-shell}
-![**Project Timeline (Week 9 – Week 14).** Gantt-style plan covering Project Exploration, Analysis of Data, Project Deliverables and Meetings, with task owners and weekly durations spanning 9 March to 19 April.](images/proposal-timeline.png){.proposal-timeline-image fig-alt="Gantt-style project timeline spanning Week 9 to Week 14, grouped into Project Exploration, Analysis of Data, Project Deliverables, and Meetings, with per-task assignees and weekly bars."}
-:::
+```{=html}
+<div class="timeline-container">
+  <a href="images/proposal-timeline.pdf" target="_blank" class="timeline-download-link" title="Open full PDF">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    <span>Download PDF</span>
+  </a>
+  <img src="images/proposal-timeline.png" alt="Project Timeline (Week 9 – Week 14) — Gantt-style plan covering Project Exploration, Analysis of Data, Project Deliverables and Meetings, with task owners and weekly durations spanning 9 March to 19 April." class="timeline-image" />
+</div>
+```
 
 :::

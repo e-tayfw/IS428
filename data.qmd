@@ -67,51 +67,57 @@ This page describes the datasets used in the project and the data preparation pi
       <span class="source-label">Influence Timeline</span>
       <h3>sailor_shift_inward_influence_timeline.csv</h3>
       <p>Generated from <code>extract_tableau_sailor_influence_timeline.py</code>. Used in <a href="methodology.html#temporal-stacked-bar-chart-of-sailor-shifts-inspirations">Section 3.2.1</a>.</p>
-      <a class="python-script-link" href="https://drive.google.com/drive/folders/1qIYVJlC53OkHSYCazWDLy4NCuLSGOeZB?usp=drive_link" target="_blank" rel="noopener noreferrer" title="View Python scripts on Google Drive">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        <span>Python Scripts</span>
-      </a>
     </article>
 
     <article class="source-card">
       <span class="source-label">Collaboration Timeline</span>
       <h3>tableau_sailor_collaboration_timeline.csv</h3>
       <p>Generated from <code>extract_tableau_sailor_collaboration_timeline.py</code>. Used in <a href="methodology.html#sailor-shift-collaboration-timeline">Section 3.3.2</a>.</p>
-      <a class="python-script-link" href="https://drive.google.com/drive/folders/1qIYVJlC53OkHSYCazWDLy4NCuLSGOeZB?usp=drive_link" target="_blank" rel="noopener noreferrer" title="View Python scripts on Google Drive">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        <span>Python Scripts</span>
-      </a>
     </article>
 
     <article class="source-card">
       <span class="source-label">Outward Genre Diffusion</span>
       <h3>tableau_oceanus_outward_genre_year.csv</h3>
       <p>Generated from <code>extract_tableau_oceanus_outward_genre_year.py</code>. Used in <a href="methodology.html#oceanus-folk-outward-diffusion-across-genres-timeline">Section 3.4.1</a>.</p>
-      <a class="python-script-link" href="https://drive.google.com/drive/folders/1qIYVJlC53OkHSYCazWDLy4NCuLSGOeZB?usp=drive_link" target="_blank" rel="noopener noreferrer" title="View Python scripts on Google Drive">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        <span>Python Scripts</span>
-      </a>
     </article>
 
     <article class="source-card">
       <span class="source-label">Outward Artist Influence</span>
       <h3>of_outward_influence_by_artist.csv</h3>
       <p>Generated from <code>extract_tableau_oceanus_outward_artist_year.py</code>. Used in <a href="methodology.html#top-artists-most-influenced-by-oceanus-folk">Section 3.4.3</a>.</p>
-      <a class="python-script-link" href="https://drive.google.com/drive/folders/1qIYVJlC53OkHSYCazWDLy4NCuLSGOeZB?usp=drive_link" target="_blank" rel="noopener noreferrer" title="View Python scripts on Google Drive">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        <span>Python Scripts</span>
-      </a>
     </article>
 
     <article class="source-card">
       <span class="source-label">Inward Genre Evolution</span>
       <h3>tableau_oceanus_inward_genre_year.csv</h3>
       <p>Generated from <code>extract_tableau_oceanus_inward_genre_year.py</code>. Used in <a href="methodology.html#inward-evolution-of-oceanus-folk">Section 3.4.4</a>.</p>
-      <a class="python-script-link" href="https://drive.google.com/drive/folders/1qIYVJlC53OkHSYCazWDLy4NCuLSGOeZB?usp=drive_link" target="_blank" rel="noopener noreferrer" title="View Python scripts on Google Drive">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        <span>Python Scripts</span>
-      </a>
     </article>
   </div>
+
+  <a class="drive-card" href="https://drive.google.com/drive/folders/1qIYVJlC53OkHSYCazWDLy4NCuLSGOeZB?usp=drive_link" target="_blank" rel="noopener noreferrer">
+    <span class="drive-icon" aria-hidden="true">
+      <svg viewBox="0 0 256 255" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+        <defs>
+          <linearGradient id="pyA" x1="12.96%" y1="12.07%" x2="79.69%" y2="78.21%">
+            <stop offset="0%" stop-color="#387EB8"/>
+            <stop offset="100%" stop-color="#366994"/>
+          </linearGradient>
+          <linearGradient id="pyB" x1="19.13%" y1="20.58%" x2="90.43%" y2="88.01%">
+            <stop offset="0%" stop-color="#FFE052"/>
+            <stop offset="100%" stop-color="#FFC331"/>
+          </linearGradient>
+        </defs>
+        <path d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072zM92.802 19.66a11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13 11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.13z" fill="url(#pyA)"/>
+        <path d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897zm34.114-19.586a11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.131 11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13z" fill="url(#pyB)"/>
+      </svg>
+    </span>
+    <span class="drive-card-copy">
+      <span class="drive-card-label">Python Scripts</span>
+      <span class="drive-card-title">View all extraction scripts</span>
+      <span class="drive-card-text">All Python scripts used to generate the CSV files above are available on Google Drive with inline comments.</span>
+    </span>
+  </a>
 </section>
 ```
+
+:::
